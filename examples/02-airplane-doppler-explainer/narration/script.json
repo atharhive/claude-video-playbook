@@ -1,0 +1,32 @@
+[
+  {
+    "id": "l1_hook",
+    "speaker": "anxious_user",
+    "text": "Wait, Claude, can someone actually find my exact home address just from background airplane noise?"
+  },
+  {
+    "id": "l2_intro",
+    "speaker": "claude_mc",
+    "text": "Yes, they can. OSINT researchers just proved that background plane sounds leak your location down to one hundred meters."
+  },
+  {
+    "id": "l3_spectrogram",
+    "speaker": "claude_mc",
+    "text": "Every propeller engine creates a distinct acoustic frequency, appearing as a curved Doppler ridge in an audio spectrogram."
+  },
+  {
+    "id": "l4_adsb",
+    "speaker": "claude_mc",
+    "text": "By calculating the exact frequency drop and closest point of approach, they match the curve against public ADS-B flight logs."
+  },
+  {
+    "id": "l5_heatmap",
+    "speaker": "claude_mc",
+    "text": "The intersection of candidate flight trajectories narrows down your position to a pinpoint radar heatmap."
+  },
+  {
+    "id": "l6_cta",
+    "speaker": "claude_mc",
+    "text": "Comment RADAR below to get the full open-source acoustic analysis script, and check the pinned comment for details!"
+  }
+]
