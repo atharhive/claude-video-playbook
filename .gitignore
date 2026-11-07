@@ -1,0 +1,47 @@
+# Node & dependencies
+node_modules/
+.pnpm-store/
+npm-debug.log*
+
+# Python & caches
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.venv*/
+*.so
+.pytest_cache/
+.mypy_cache/
+
+# Renders & binaries (do not commit heavy video/audio blobs)
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.ogg
+*.aiff
+*.avi
+*.mkv
+out/
+dist/
+build/
+.cache/
+bundle/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.token
+credentials.json
+*secret*
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
