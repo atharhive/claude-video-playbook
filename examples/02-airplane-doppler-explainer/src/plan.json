@@ -1,0 +1,587 @@
+{
+ "fps": 30,
+ "durationInFrames": 1244,
+ "scenes": [
+  {
+   "id": "S01AnxiousHook",
+   "from": 0,
+   "durationInFrames": 155,
+   "words": [
+    {
+     "text": "Wait,",
+     "f": 6,
+     "e": 15
+    },
+    {
+     "text": "Claude,",
+     "f": 15,
+     "e": 26
+    },
+    {
+     "text": "can",
+     "f": 26,
+     "e": 32
+    },
+    {
+     "text": "someone",
+     "f": 32,
+     "e": 44
+    },
+    {
+     "text": "actually",
+     "f": 44,
+     "e": 56
+    },
+    {
+     "text": "find",
+     "f": 56,
+     "e": 64
+    },
+    {
+     "text": "my",
+     "f": 64,
+     "e": 69
+    },
+    {
+     "text": "exact",
+     "f": 69,
+     "e": 78
+    },
+    {
+     "text": "home",
+     "f": 78,
+     "e": 85
+    },
+    {
+     "text": "address",
+     "f": 85,
+     "e": 97
+    },
+    {
+     "text": "just",
+     "f": 97,
+     "e": 104
+    },
+    {
+     "text": "from",
+     "f": 104,
+     "e": 112
+    },
+    {
+     "text": "background",
+     "f": 112,
+     "e": 127
+    },
+    {
+     "text": "airplane",
+     "f": 127,
+     "e": 139
+    },
+    {
+     "text": "noise?",
+     "f": 139,
+     "e": 149
+    }
+   ]
+  },
+  {
+   "id": "S02ClaudeIntro",
+   "from": 155,
+   "durationInFrames": 199,
+   "words": [
+    {
+     "text": "Yes,",
+     "f": 2,
+     "e": 10
+    },
+    {
+     "text": "they",
+     "f": 10,
+     "e": 18
+    },
+    {
+     "text": "can.",
+     "f": 18,
+     "e": 27
+    },
+    {
+     "text": "OSINT",
+     "f": 27,
+     "e": 36
+    },
+    {
+     "text": "researchers",
+     "f": 36,
+     "e": 54
+    },
+    {
+     "text": "just",
+     "f": 54,
+     "e": 62
+    },
+    {
+     "text": "proved",
+     "f": 62,
+     "e": 73
+    },
+    {
+     "text": "that",
+     "f": 73,
+     "e": 82
+    },
+    {
+     "text": "background",
+     "f": 82,
+     "e": 98
+    },
+    {
+     "text": "plane",
+     "f": 98,
+     "e": 108
+    },
+    {
+     "text": "sounds",
+     "f": 108,
+     "e": 119
+    },
+    {
+     "text": "leak",
+     "f": 119,
+     "e": 127
+    },
+    {
+     "text": "your",
+     "f": 127,
+     "e": 135
+    },
+    {
+     "text": "location",
+     "f": 135,
+     "e": 149
+    },
+    {
+     "text": "down",
+     "f": 149,
+     "e": 157
+    },
+    {
+     "text": "to",
+     "f": 157,
+     "e": 163
+    },
+    {
+     "text": "one",
+     "f": 163,
+     "e": 170
+    },
+    {
+     "text": "hundred",
+     "f": 170,
+     "e": 182
+    },
+    {
+     "text": "meters.",
+     "f": 182,
+     "e": 194
+    }
+   ]
+  },
+  {
+   "id": "S03Spectrogram",
+   "from": 354,
+   "durationInFrames": 213,
+   "words": [
+    {
+     "text": "Every",
+     "f": 3,
+     "e": 13
+    },
+    {
+     "text": "propeller",
+     "f": 13,
+     "e": 29
+    },
+    {
+     "text": "engine",
+     "f": 29,
+     "e": 41
+    },
+    {
+     "text": "creates",
+     "f": 41,
+     "e": 54
+    },
+    {
+     "text": "a",
+     "f": 54,
+     "e": 58
+    },
+    {
+     "text": "distinct",
+     "f": 58,
+     "e": 72
+    },
+    {
+     "text": "acoustic",
+     "f": 72,
+     "e": 87
+    },
+    {
+     "text": "frequency,",
+     "f": 87,
+     "e": 104
+    },
+    {
+     "text": "appearing",
+     "f": 104,
+     "e": 120
+    },
+    {
+     "text": "as",
+     "f": 120,
+     "e": 126
+    },
+    {
+     "text": "a",
+     "f": 126,
+     "e": 131
+    },
+    {
+     "text": "curved",
+     "f": 131,
+     "e": 142
+    },
+    {
+     "text": "Doppler",
+     "f": 142,
+     "e": 155
+    },
+    {
+     "text": "ridge",
+     "f": 155,
+     "e": 165
+    },
+    {
+     "text": "in",
+     "f": 165,
+     "e": 171
+    },
+    {
+     "text": "an",
+     "f": 171,
+     "e": 177
+    },
+    {
+     "text": "audio",
+     "f": 177,
+     "e": 187
+    },
+    {
+     "text": "spectrogram.",
+     "f": 187,
+     "e": 208
+    }
+   ]
+  },
+  {
+   "id": "S04FlightLogs",
+   "from": 567,
+   "durationInFrames": 230,
+   "words": [
+    {
+     "text": "By",
+     "f": 2,
+     "e": 8
+    },
+    {
+     "text": "calculating",
+     "f": 8,
+     "e": 28
+    },
+    {
+     "text": "the",
+     "f": 28,
+     "e": 36
+    },
+    {
+     "text": "exact",
+     "f": 36,
+     "e": 46
+    },
+    {
+     "text": "frequency",
+     "f": 46,
+     "e": 63
+    },
+    {
+     "text": "drop",
+     "f": 63,
+     "e": 72
+    },
+    {
+     "text": "and",
+     "f": 72,
+     "e": 80
+    },
+    {
+     "text": "closest",
+     "f": 80,
+     "e": 94
+    },
+    {
+     "text": "point",
+     "f": 94,
+     "e": 104
+    },
+    {
+     "text": "of",
+     "f": 104,
+     "e": 110
+    },
+    {
+     "text": "approach,",
+     "f": 110,
+     "e": 127
+    },
+    {
+     "text": "they",
+     "f": 127,
+     "e": 136
+    },
+    {
+     "text": "match",
+     "f": 136,
+     "e": 147
+    },
+    {
+     "text": "the",
+     "f": 147,
+     "e": 155
+    },
+    {
+     "text": "curve",
+     "f": 155,
+     "e": 165
+    },
+    {
+     "text": "against",
+     "f": 165,
+     "e": 179
+    },
+    {
+     "text": "public",
+     "f": 179,
+     "e": 191
+    },
+    {
+     "text": "ADS-B",
+     "f": 191,
+     "e": 202
+    },
+    {
+     "text": "flight",
+     "f": 202,
+     "e": 214
+    },
+    {
+     "text": "logs.",
+     "f": 214,
+     "e": 225
+    }
+   ]
+  },
+  {
+   "id": "S05Heatmap",
+   "from": 797,
+   "durationInFrames": 162,
+   "words": [
+    {
+     "text": "The",
+     "f": 2,
+     "e": 9
+    },
+    {
+     "text": "intersection",
+     "f": 9,
+     "e": 27
+    },
+    {
+     "text": "of",
+     "f": 27,
+     "e": 32
+    },
+    {
+     "text": "candidate",
+     "f": 32,
+     "e": 46
+    },
+    {
+     "text": "flight",
+     "f": 46,
+     "e": 56
+    },
+    {
+     "text": "trajectories",
+     "f": 56,
+     "e": 74
+    },
+    {
+     "text": "narrows",
+     "f": 74,
+     "e": 86
+    },
+    {
+     "text": "down",
+     "f": 86,
+     "e": 93
+    },
+    {
+     "text": "your",
+     "f": 93,
+     "e": 101
+    },
+    {
+     "text": "position",
+     "f": 101,
+     "e": 114
+    },
+    {
+     "text": "to",
+     "f": 114,
+     "e": 119
+    },
+    {
+     "text": "a",
+     "f": 119,
+     "e": 123
+    },
+    {
+     "text": "pinpoint",
+     "f": 123,
+     "e": 135
+    },
+    {
+     "text": "radar",
+     "f": 135,
+     "e": 144
+    },
+    {
+     "text": "heatmap.",
+     "f": 144,
+     "e": 157
+    }
+   ]
+  },
+  {
+   "id": "S06CtaPin",
+   "from": 959,
+   "durationInFrames": 285,
+   "words": [
+    {
+     "text": "Comment",
+     "f": 3,
+     "e": 17
+    },
+    {
+     "text": "RADAR",
+     "f": 17,
+     "e": 28
+    },
+    {
+     "text": "below",
+     "f": 28,
+     "e": 40
+    },
+    {
+     "text": "to",
+     "f": 40,
+     "e": 46
+    },
+    {
+     "text": "get",
+     "f": 46,
+     "e": 54
+    },
+    {
+     "text": "the",
+     "f": 54,
+     "e": 62
+    },
+    {
+     "text": "full",
+     "f": 62,
+     "e": 72
+    },
+    {
+     "text": "open-source",
+     "f": 72,
+     "e": 93
+    },
+    {
+     "text": "acoustic",
+     "f": 93,
+     "e": 109
+    },
+    {
+     "text": "analysis",
+     "f": 109,
+     "e": 125
+    },
+    {
+     "text": "script,",
+     "f": 125,
+     "e": 140
+    },
+    {
+     "text": "and",
+     "f": 140,
+     "e": 148
+    },
+    {
+     "text": "check",
+     "f": 148,
+     "e": 159
+    },
+    {
+     "text": "the",
+     "f": 159,
+     "e": 167
+    },
+    {
+     "text": "pinned",
+     "f": 167,
+     "e": 180
+    },
+    {
+     "text": "comment",
+     "f": 180,
+     "e": 194
+    },
+    {
+     "text": "for",
+     "f": 194,
+     "e": 202
+    },
+    {
+     "text": "details!",
+     "f": 202,
+     "e": 219
+    }
+   ]
+  }
+ ],
+ "hook": {
+  "lines": [
+   [
+    "LEAKED"
+   ],
+   [
+    "BY AIRPLANES?"
+   ]
+  ],
+  "hot": [
+   "BY AIRPLANES?"
+  ],
+  "outAt": 75
+ }
+}
