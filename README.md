@@ -96,7 +96,8 @@ npx remotion render src/index.ts ClaudeLaunch out/video.mp4
 - [Architecture Guide](docs/architecture.md): In-depth review of the code-to-video compilation process.
 - [Production Runbook](docs/runbook.md): Headless Linux VPS rendering commands and troubleshooting.
 - [Show HN Post Draft](docs/show-hn.md): Launch narrative and benchmark performance summary.
-- [Example 01 Walkthrough](examples/01-claude-launch/README.md): Complete scene breakdown of the Claude launch video.
+- [Example 01: Claude Launch Reel](examples/01-claude-launch/README.md): Complete scene breakdown of the Claude launch video.
+- [Example 02: Airplane Doppler Geolocation](examples/02-airplane-doppler-explainer/README.md): Investigative dual-voice OSINT explainer video with zero music and custom Foley.
 
 </details>
 
