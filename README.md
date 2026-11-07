@@ -9,11 +9,14 @@ git clone https://github.com/atharhive/claude-video-playbook.git && cd claude-vi
 ![Claude Video Playbook Banner](assets/images/banner.svg)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License MIT">
-  <img src="https://img.shields.io/badge/pipeline-remotion%20%7C%20gsap%20%7C%20ffmpeg-purple.svg?style=flat-square" alt="Pipeline">
-  <img src="https://img.shields.io/badge/voice-elevenlabs%20%7C%20edge--tts-orange.svg?style=flat-square" alt="Voice Engine">
-  <img src="https://img.shields.io/badge/recipes-700%2B%20prompts-green.svg?style=flat-square" alt="Recipes">
-  <img src="https://img.shields.io/badge/SLA-24h%20response-blue.svg?style=flat-square" alt="SLA">
+  <a href="https://github.com/atharhive/claude-video-playbook/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/atharhive/claude-video-playbook/ci.yml?branch=main&label=CI&style=flat-square&logo=githubactions&logoColor=white" alt="CI Status"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License"></a>
+  <a href="https://code.claude.com"><img src="https://img.shields.io/badge/Agent-Claude%20Code-D97757.svg?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code"></a>
+  <a href="https://remotion.dev"><img src="https://img.shields.io/badge/Engine-Remotion%204.0-0B84F3.svg?style=flat-square&logo=react&logoColor=white" alt="Remotion"></a>
+  <a href="https://elevenlabs.io"><img src="https://img.shields.io/badge/Audio-ElevenLabs-black.svg?style=flat-square" alt="ElevenLabs"></a>
+  <a href="https://ffmpeg.org"><img src="https://img.shields.io/badge/Renderer-Chromium%20%2B%20FFmpeg-007808.svg?style=flat-square&logo=ffmpeg&logoColor=white" alt="Renderer"></a>
+  <a href="https://github.com/atharhive/claude-video-playbook"><img src="https://img.shields.io/badge/Prompts-700%2B%20Recipes-7C3AED.svg?style=flat-square" alt="Prompts"></a>
+  <a href="https://github.com/atharhive/claude-video-playbook"><img src="https://img.shields.io/badge/SLA-24h%20Response-success.svg?style=flat-square" alt="24h SLA"></a>
 </p>
 
 ## Overview
