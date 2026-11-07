@@ -28,28 +28,28 @@ export const S04FlightLogs: React.FC = () => {
 
         <Depth z={0.5}>
           <Paper lift={8}>
-            <Slab x={140} y={480} w={800} h={600} color="#FAF7F2" shade={C.creamLo} shadeH={0.03} r={14} rot={1}>
-              <div style={{padding: '36px 44px'}}>
-                <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24}}>
-                  <span style={{fontFamily: FONT.banner, fontSize: 30, color: C.ink}}>
+            <Slab x={140} y={440} w={800} h={520} color="#FAF7F2" shade={C.creamLo} shadeH={0.03} r={14} rot={1}>
+              <div style={{padding: '30px 40px'}}>
+                <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20}}>
+                  <span style={{fontFamily: FONT.banner, fontSize: 28, color: C.ink}}>
                     PUBLIC ADS-B FLIGHT RADAR
                   </span>
-                  <span style={{padding: '4px 12px', background: '#DCFCE7', borderRadius: 12, fontFamily: FONT.mono, fontSize: 16, color: '#166534', fontWeight: 700}}>
+                  <span style={{padding: '4px 12px', background: '#DCFCE7', borderRadius: 12, fontFamily: FONT.mono, fontSize: 15, color: '#166534', fontWeight: 700}}>
                     SURVEILLANCE MATCH
                   </span>
                 </div>
 
-                <div style={{display: 'flex', flexDirection: 'column', gap: 14}}>
+                <div style={{display: 'flex', flexDirection: 'column', gap: 12}}>
                   {LOG_ROWS.map((row, idx) => (
                     <PopIn key={row.icao} at={(cue('match') || 40) + idx * 10}>
-                      <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 18px', background: '#F4EFEA', borderRadius: 8, border: '1px solid #E5DFD5'}}>
-                        <div style={{fontFamily: FONT.mono, fontSize: 20, color: C.ink, fontWeight: 700}}>
-                          {row.icao} <span style={{fontSize: 16, color: '#6E6A64'}}>({row.type})</span>
+                      <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 16px', background: '#F4EFEA', borderRadius: 8, border: '1px solid #E5DFD5'}}>
+                        <div style={{fontFamily: FONT.mono, fontSize: 18, color: C.ink, fontWeight: 700}}>
+                          {row.icao} <span style={{fontSize: 15, color: '#6E6A64'}}>({row.type})</span>
                         </div>
-                        <div style={{fontFamily: FONT.mono, fontSize: 18, color: '#4B5563'}}>
+                        <div style={{fontFamily: FONT.mono, fontSize: 16, color: '#4B5563'}}>
                           {row.alt} • {row.spd}
                         </div>
-                        <div style={{padding: '4px 10px', background: C.go, borderRadius: 6, color: '#FFF', fontFamily: FONT.mono, fontSize: 16, fontWeight: 800}}>
+                        <div style={{padding: '4px 10px', background: C.go, borderRadius: 6, color: '#FFF', fontFamily: FONT.mono, fontSize: 15, fontWeight: 800}}>
                           {row.match}
                         </div>
                       </div>
@@ -60,12 +60,12 @@ export const S04FlightLogs: React.FC = () => {
             </Slab>
           </Paper>
 
-          <StampMark at={cue('public') || 60} x={660} y={1000} text="RADAR MATCH" color={C.go} size={64} rot={-10} />
+          <StampMark at={cue('public') || 60} x={660} y={920} text="RADAR MATCH" color={C.go} size={60} rot={-10} />
         </Depth>
 
         <Depth z={1}>
           <PopIn at={12}>
-            <Pill x={540} y={380} text="ADS-B FLIGHT TELEMETRY" bg={C.sparkYellow} color={C.ink} size={42} rot={-1} center />
+            <Pill x={540} y={340} text="ADS-B FLIGHT TELEMETRY" bg={C.sparkYellow} color={C.ink} size={40} rot={-1} center />
           </PopIn>
         </Depth>
       </OrbitCamera>

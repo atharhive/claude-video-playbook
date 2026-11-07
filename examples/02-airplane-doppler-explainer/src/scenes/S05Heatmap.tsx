@@ -23,13 +23,13 @@ export const S05Heatmap: React.FC = () => {
 
           <Depth z={0.5}>
             <Paper lift={8}>
-              <Slab x={140} y={480} w={800} h={580} color="#0D1117" shade="#000" shadeH={0.04} r={14} rot={-1}>
-                <div style={{padding: '24px 28px'}}>
-                  <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16}}>
-                    <span style={{fontFamily: FONT.mono, fontSize: 22, fontWeight: 700, color: '#EF4444', letterSpacing: '0.06em'}}>
+              <Slab x={140} y={440} w={800} h={520} color="#0D1117" shade="#000" shadeH={0.04} r={14} rot={-1}>
+                <div style={{padding: '20px 24px'}}>
+                  <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12}}>
+                    <span style={{fontFamily: FONT.mono, fontSize: 20, fontWeight: 700, color: '#EF4444', letterSpacing: '0.06em'}}>
                       RADAR ACOUSTIC TRIANGULATION
                     </span>
-                    <span style={{padding: '4px 12px', background: '#37181E', borderRadius: 12, fontFamily: FONT.mono, fontSize: 16, color: '#F87171'}}>
+                    <span style={{padding: '4px 12px', background: '#37181E', borderRadius: 12, fontFamily: FONT.mono, fontSize: 15, color: '#F87171'}}>
                       LOCATED
                     </span>
                   </div>
@@ -38,12 +38,12 @@ export const S05Heatmap: React.FC = () => {
               </Slab>
             </Paper>
 
-            <StampMark at={cue('pinpoint') || 35} x={680} y={1020} text="100M HEATMAP" color={C.nogo} size={64} rot={-10} />
+            <StampMark at={cue('pinpoint') || 35} x={680} y={920} text="100M HEATMAP" color={C.nogo} size={60} rot={-10} />
           </Depth>
 
           <Depth z={1}>
             <PopIn at={10}>
-              <Pill x={540} y={380} text="PRECISE LOCATION SOLVED" bg={C.nogo} color="#FFF" size={42} rot={-2} center />
+              <Pill x={540} y={340} text="PRECISE LOCATION SOLVED" bg={C.nogo} color="#FFF" size={40} rot={-2} center />
             </PopIn>
           </Depth>
         </OrbitCamera>

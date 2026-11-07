@@ -29,12 +29,7 @@ const CUTS = ((EP as {cuts?: Record<string, CutSpec>}).cuts ?? {});
 const bannerFrom = (from: number) => (HOOK ? Math.max(from, HOOK.outAt) : from);
 
 export const PapercutVideo: React.FC = () => {
-  const bandAt = (ms: number) => {
-    const f = (ms / 1000) * PLAN.fps;
-    let band = SCENES[0].band;
-    for (const s of SCENES) if (fromOf(s.id).from <= f + 1) band = s.band;
-    return band;
-  };
+  const bandAt = (ms: number) => 0.62;
   return (
     <AbsoluteFill style={{backgroundColor: '#1a1a1a'}}>
       <PaperDefs />
@@ -54,9 +49,7 @@ export const PapercutVideo: React.FC = () => {
       ) : null}
       <WordTagCaptions captions={captions} bandY={bandAt} />
       <GrainOverlay />
-      <Audio src={staticFile('vo/voiceover.wav')} />
-      <Audio src={staticFile('audio/music.wav')} volume={(f) => musicVolume(f)} />
-      <Audio src={staticFile('audio/fx.wav')} volume={0.9} />
+      <Audio src={staticFile('audio/audio_master.wav')} volume={1.0} />
     </AbsoluteFill>
   );
 };

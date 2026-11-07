@@ -10,7 +10,7 @@ export type SceneDef = {id: string; component: React.FC; banner: string; band: n
 
 export const SCENES: SceneDef[] = [
   {id: 'S01AnxiousHook', component: S01AnxiousHook, banner: 'AUDIO SURVEILLANCE THREAT', band: 0},
-  {id: 'S02ClaudeIntro', component: S02ClaudeIntro, banner: 'GEOLOCATION FROM BACKGROUND NOISE', band: 0},
+  {id: 'S02ClaudeIntro', component: S02ClaudeIntro, banner: 'COLSTO OSINT BREAKTHROUGH', band: 0},
   {id: 'S03Spectrogram', component: S03Spectrogram, banner: 'DOPPLER FREQUENCY RIDGE CURVE', band: 0},
   {id: 'S04FlightLogs', component: S04FlightLogs, banner: 'ADS-B FLIGHT RADAR MATCHING', band: 0},
   {id: 'S05Heatmap', component: S05Heatmap, banner: '100-METER PINPOINT HEATMAP', band: 0},

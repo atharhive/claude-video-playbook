@@ -2,31 +2,31 @@
   {
     "id": "l1_hook",
     "speaker": "anxious_user",
-    "text": "Wait, Claude, can someone actually find my exact home address just from background airplane noise?"
+    "text": "Your exact physical location can now be exposed just from a voice clip, video, or a simple livestream."
   },
   {
-    "id": "l2_intro",
+    "id": "l2_story",
     "speaker": "claude_mc",
-    "text": "Yes, they can. OSINT researchers just proved that background plane sounds leak your location down to one hundred meters."
+    "text": "This viral breakthrough comes from OSINT researcher Colsto, who proved that inaudible airplane sounds reveal where you are."
   },
   {
     "id": "l3_spectrogram",
     "speaker": "claude_mc",
-    "text": "Every propeller engine creates a distinct acoustic frequency, appearing as a curved Doppler ridge in an audio spectrogram."
+    "text": "Whenever a plane passes overhead, propeller blade frequencies create a distinct Doppler pitch drop visible in a spectrogram."
   },
   {
     "id": "l4_adsb",
     "speaker": "claude_mc",
-    "text": "By calculating the exact frequency drop and closest point of approach, they match the curve against public ADS-B flight logs."
+    "text": "By calculating the exact frequency shift, his Python pipeline matches that sound signature against public ADS-B flight radar records."
   },
   {
     "id": "l5_heatmap",
     "speaker": "claude_mc",
-    "text": "The intersection of candidate flight trajectories narrows down your position to a pinpoint radar heatmap."
+    "text": "Even with a blurry sixty-second clip, the intersection of flight paths pinpointed the camera to within one hundred meters."
   },
   {
     "id": "l6_cta",
     "speaker": "claude_mc",
-    "text": "Comment RADAR below to get the full open-source acoustic analysis script, and check the pinned comment for details!"
+    "text": "Comment RADAR below to get the full research breakdown, and check the pinned comment for details!"
   }
 ]

@@ -61,7 +61,7 @@ export const WordTagCaptions: React.FC<{captions: Caption[]; bandY: (ms: number)
   const page = pages.find((p) => ms >= p.startMs - 40 && ms < p.endMs);
   if (!page) return null;
   return (
-    <div style={{position: 'absolute', top: 1920 * bandY(page.startMs), left: 60, right: 60, display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 12}}>
+    <div style={{position: 'absolute', top: 1920 * bandY(page.startMs), left: 60, width: 620, display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 12}}>
       {page.words.filter((w) => ms >= w.startMs - 40).map((w) => {
         const at = Math.round((w.startMs / 1000) * fps) - 1;
         const s = spring({frame: frame - at, fps, config: {damping: 14, stiffness: 260, mass: 0.5}});

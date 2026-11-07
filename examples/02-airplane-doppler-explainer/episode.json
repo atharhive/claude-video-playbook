@@ -10,27 +10,29 @@
  "whipScene": "S05Heatmap",
  "hook": {
   "lines": [
-   ["LEAKED"],
-   ["BY AIRPLANES?"]
+   ["LOCATION"],
+   ["EXPOSED?"]
   ],
-  "hot": ["BY AIRPLANES?"],
+  "hot": ["EXPOSED?"],
+  "top": 140,
+  "size": 86,
   "hold": 2.5
  },
  "scenes": [
   ["S01AnxiousHook", "l1_hook", 0],
-  ["S02ClaudeIntro", "l2_intro", 0],
+  ["S02ClaudeIntro", "l2_story", 0],
   ["S03Spectrogram", "l3_spectrogram", 0],
   ["S04FlightLogs", "l4_adsb", 0],
   ["S05Heatmap", "l5_heatmap", 0],
   ["S06CtaPin", "l6_cta", 0]
  ],
  "banners": {
-  "S01AnxiousHook": "AUDIO SURVEILLANCE THREAT",
-  "S02ClaudeIntro": "GEOLOCATION FROM BACKGROUND NOISE",
-  "S03Spectrogram": "DOPPLER FREQUENCY RIDGE CURVE",
-  "S04FlightLogs": "ADS-B FLIGHT RADAR MATCHING",
-  "S05Heatmap": "100-METER PINPOINT HEATMAP",
-  "S06CtaPin": "COMMENT RADAR • CHECK PINNED COMMENT"
+ "S01AnxiousHook": "AUDIO SURVEILLANCE THREAT",
+ "S02ClaudeIntro": "COLSTO OSINT BREAKTHROUGH",
+ "S03Spectrogram": "DOPPLER FREQUENCY RIDGE CURVE",
+ "S04FlightLogs": "ADS-B FLIGHT RADAR MATCHING",
+ "S05Heatmap": "100-METER PINPOINT HEATMAP",
+ "S06CtaPin": "COMMENT RADAR • CHECK PINNED COMMENT"
  },
  "cuts": {
   "S02ClaudeIntro": {"kind": "tapePull", "label": "CLAUDE EXPLAINS"},

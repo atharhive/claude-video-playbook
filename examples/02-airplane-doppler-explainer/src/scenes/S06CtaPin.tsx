@@ -14,14 +14,14 @@ export const S06CtaPin: React.FC = () => {
       dur={durOf(ID)}
       keyword="RADAR"
       typeAt={cue('radar') || 17}
-      sendAt={cue('script') || 125}
-      landAt={(cue('script') || 125) + 15}
-      sparkleAt={cue('pinned') || 167}
+      sendAt={cue('script') || 120}
+      landAt={(cue('script') || 120) + 14}
+      sparkleAt={cue('pinned') || 160}
       whip={false}
       itemW={320}
-      itemH={420}
+      itemH={360}
       items={[
-        <Card key="radar_kit" x={0} y={0} w={320} h={420} lines={5} seed="radar_dossier">
+        <Card key="radar_kit" x={0} y={0} w={320} h={360} lines={4} seed="radar_dossier">
           <div style={{padding: '16px', fontWeight: 800, fontSize: '18px', color: '#1C1B17'}}>
             AIRCRAFT DOPPLER OSINT TOOLKIT
           </div>

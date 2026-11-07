@@ -48,7 +48,7 @@ const baseCam = (o: Partial<Cam> & Pick<Cam, 'span' | 'focus' | 'origin'>): Cam 
 });
 
 // Parallax orbit: the camera arcs `yaw` degrees (16) around the focal plane while dollying to `push`, so <Depth z> layers separate. `origin` = pivot px (near the floor line), `depth` = layer spacing, `drift` = pan px.
-export const OrbitCamera: React.FC<{dur: number; yaw?: number; drift?: [number, number]; push?: number; focus?: number; depth?: number; origin?: [number, number]; children: React.ReactNode}> = ({dur, yaw = 16, drift = [0, 0], push = 1.08, focus = 0.45, depth = 800, origin = [540, 1000], children}) => {
+export const OrbitCamera: React.FC<{dur: number; yaw?: number; drift?: [number, number]; push?: number; focus?: number; depth?: number; origin?: [number, number]; children: React.ReactNode}> = ({dur, yaw = 3, drift = [0, 0], push = 1.02, focus = 0.45, depth = 800, origin = [540, 1000], children}) => {
   const f = useCurrentFrame();
   const t = interpolate(f, [0, Math.max(1, dur)], [0, 1], {...clamp, easing: Easing.bezier(0.4, 0, 0.3, 1)});
   const cam = baseCam({
@@ -213,7 +213,7 @@ const snapAt = (t: number, to: number, settle: number) => {
 };
 
 // Punch-in to the focal point (x, y): 1 to `to` (1.25) in 4 frames with radial motion blur, a 3-frame shake and a little roll, then settles at `settle`. For numbers and joke landings: `at` = the frame the thing lands.
-export const SnapZoom: React.FC<{at: number; x?: number; y?: number; to?: number; settle?: number; shake?: number; roll?: number; blur?: boolean; children: React.ReactNode}> = ({at, x = 540, y = 960, to = 1.25, settle = 1.17, shake = 18, roll = 1.4, blur = true, children}) => {
+export const SnapZoom: React.FC<{at: number; x?: number; y?: number; to?: number; settle?: number; shake?: number; roll?: number; blur?: boolean; children: React.ReactNode}> = ({at, x = 540, y = 960, to = 1.08, settle = 1.04, shake = 0, roll = 0, blur = false, children}) => {
   const f = useCurrentFrame();
   const tf = (t: number) => {
     const u = t - at;
