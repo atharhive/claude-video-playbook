@@ -13,10 +13,10 @@ export const S06CtaPin: React.FC = () => {
     <CtaPhoneDM
       dur={durOf(ID)}
       keyword="RADAR"
-      typeAt={cue('RADAR') || 14}
-      sendAt={cue('send') || 55}
-      landAt={(cue('send') || 55) + 8}
-      sparkleAt={(cue('pinned') || 85)}
+      typeAt={cue('radar') || 17}
+      sendAt={cue('script') || 125}
+      landAt={(cue('script') || 125) + 15}
+      sparkleAt={cue('pinned') || 167}
       whip={false}
       itemW={320}
       itemH={420}

@@ -19,7 +19,7 @@ export const cueOf = (id: string) => {
     const want = norm(word);
     let k = 0;
     for (const w of s.words) if (norm(w.text).startsWith(want) && k++ === n) return w.f;
-    throw new Error(`Cue "${word}"#${n} not in ${id}`);
+    return 0;
   };
 };
 export const durOf = (id: string) => scene(id).durationInFrames;
