@@ -1,0 +1,43 @@
+{
+ "comp": "ClaudeLaunch",
+ "out": "claude-launch",
+ "bed": "marimba-Am-120",
+ "narration": "../narration",
+ "timing": "timing_narrator.js",
+ "fps": 30,
+ "start": 0.2,
+ "gap": 0.22,
+ "hold": 2.0,
+ "whipScene": "S05Proof",
+ "hook": {
+  "lines": [
+   ["WANT 500"],
+   ["STARS?"]
+  ],
+  "hot": ["STARS?"],
+  "hold": 2.5
+ },
+ "scenes": [
+  ["S01Hook", "l1_hook", 0],
+  ["S02Problem", "l2_problem", 0],
+  ["S03Claude", "l3_claude", 0],
+  ["S04Checklist", "l4_checklist", 0],
+  ["S05Proof", "l5_proof", 0],
+  ["S06Cta", "l6_cta", 0]
+ ],
+ "banners": {
+  "S01Hook": "GREAT CODE IS NOT ENOUGH",
+  "S02Problem": "THE 3 FATAL REPO MISTAKES",
+  "S03Claude": "CLAUDE CODE TAKES THE WHEEL",
+  "S04Checklist": "THE 16-ITEM SETTL AUDIT",
+  "S05Proof": "TOP TRENDING ON SHOW HN",
+  "S06Cta": "COMMENT REPO FOR THE PROMPT"
+ },
+ "cuts": {
+  "S02Problem": {"kind": "tapePull", "label": "WHY?"},
+  "S03Claude": {"kind": "zoomThrough", "x": 540, "y": 960},
+  "S04Checklist": {"kind": "tearAway"},
+  "S05Proof": {"kind": "whip"},
+  "S06Cta": {"kind": "stampCut"}
+ }
+}
