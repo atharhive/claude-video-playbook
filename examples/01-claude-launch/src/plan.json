@@ -1,0 +1,437 @@
+{
+ "fps": 30,
+ "durationInFrames": 853,
+ "scenes": [
+  {
+   "id": "S01Hook",
+   "from": 0,
+   "durationInFrames": 141,
+   "words": [
+    {
+     "text": "Do",
+     "f": 6,
+     "e": 12
+    },
+    {
+     "text": "you",
+     "f": 12,
+     "e": 19
+    },
+    {
+     "text": "want",
+     "f": 19,
+     "e": 27
+    },
+    {
+     "text": "500",
+     "f": 27,
+     "e": 34
+    },
+    {
+     "text": "stars",
+     "f": 34,
+     "e": 44
+    },
+    {
+     "text": "on",
+     "f": 44,
+     "e": 50
+    },
+    {
+     "text": "your",
+     "f": 50,
+     "e": 58
+    },
+    {
+     "text": "GitHub",
+     "f": 58,
+     "e": 69
+    },
+    {
+     "text": "repo,",
+     "f": 69,
+     "e": 79
+    },
+    {
+     "text": "but",
+     "f": 79,
+     "e": 86
+    },
+    {
+     "text": "your",
+     "f": 86,
+     "e": 95
+    },
+    {
+     "text": "code",
+     "f": 95,
+     "e": 103
+    },
+    {
+     "text": "is",
+     "f": 103,
+     "e": 109
+    },
+    {
+     "text": "sitting",
+     "f": 109,
+     "e": 121
+    },
+    {
+     "text": "at",
+     "f": 121,
+     "e": 127
+    },
+    {
+     "text": "zero?",
+     "f": 127,
+     "e": 137
+    }
+   ]
+  },
+  {
+   "id": "S02Problem",
+   "from": 141,
+   "durationInFrames": 146,
+   "words": [
+    {
+     "text": "No",
+     "f": 3,
+     "e": 9
+    },
+    {
+     "text": "hero",
+     "f": 9,
+     "e": 19
+    },
+    {
+     "text": "banner,",
+     "f": 19,
+     "e": 34
+    },
+    {
+     "text": "a",
+     "f": 34,
+     "e": 39
+    },
+    {
+     "text": "painful",
+     "f": 39,
+     "e": 54
+    },
+    {
+     "text": "six-step",
+     "f": 54,
+     "e": 71
+    },
+    {
+     "text": "install,",
+     "f": 71,
+     "e": 87
+    },
+    {
+     "text": "and",
+     "f": 87,
+     "e": 95
+    },
+    {
+     "text": "an",
+     "f": 95,
+     "e": 102
+    },
+    {
+     "text": "empty",
+     "f": 102,
+     "e": 114
+    },
+    {
+     "text": "issue",
+     "f": 114,
+     "e": 125
+    },
+    {
+     "text": "tracker.",
+     "f": 125,
+     "e": 142
+    }
+   ]
+  },
+  {
+   "id": "S03Claude",
+   "from": 287,
+   "durationInFrames": 113,
+   "words": [
+    {
+     "text": "So",
+     "f": 2,
+     "e": 8
+    },
+    {
+     "text": "I",
+     "f": 8,
+     "e": 12
+    },
+    {
+     "text": "gave",
+     "f": 12,
+     "e": 21
+    },
+    {
+     "text": "Claude",
+     "f": 21,
+     "e": 32
+    },
+    {
+     "text": "Code",
+     "f": 32,
+     "e": 40
+    },
+    {
+     "text": "the",
+     "f": 40,
+     "e": 47
+    },
+    {
+     "text": "sixteen",
+     "f": 47,
+     "e": 60
+    },
+    {
+     "text": "launch",
+     "f": 60,
+     "e": 71
+    },
+    {
+     "text": "rules",
+     "f": 71,
+     "e": 81
+    },
+    {
+     "text": "to",
+     "f": 81,
+     "e": 86
+    },
+    {
+     "text": "fix",
+     "f": 86,
+     "e": 93
+    },
+    {
+     "text": "my",
+     "f": 93,
+     "e": 99
+    },
+    {
+     "text": "repo.",
+     "f": 99,
+     "e": 108
+    }
+   ]
+  },
+  {
+   "id": "S04Checklist",
+   "from": 400,
+   "durationInFrames": 154,
+   "words": [
+    {
+     "text": "Claude",
+     "f": 2,
+     "e": 15
+    },
+    {
+     "text": "generated",
+     "f": 15,
+     "e": 32
+    },
+    {
+     "text": "high-res",
+     "f": 32,
+     "e": 49
+    },
+    {
+     "text": "visual",
+     "f": 49,
+     "e": 61
+    },
+    {
+     "text": "banners,",
+     "f": 61,
+     "e": 77
+    },
+    {
+     "text": "one-command",
+     "f": 77,
+     "e": 98
+    },
+    {
+     "text": "setups,",
+     "f": 98,
+     "e": 113
+    },
+    {
+     "text": "and",
+     "f": 113,
+     "e": 121
+    },
+    {
+     "text": "starter",
+     "f": 121,
+     "e": 135
+    },
+    {
+     "text": "issues.",
+     "f": 135,
+     "e": 150
+    }
+   ]
+  },
+  {
+   "id": "S05Proof",
+   "from": 554,
+   "durationInFrames": 130,
+   "words": [
+    {
+     "text": "And",
+     "f": 2,
+     "e": 10
+    },
+    {
+     "text": "overnight,",
+     "f": 10,
+     "e": 30
+    },
+    {
+     "text": "the",
+     "f": 30,
+     "e": 38
+    },
+    {
+     "text": "repo",
+     "f": 38,
+     "e": 47
+    },
+    {
+     "text": "jumped",
+     "f": 47,
+     "e": 60
+    },
+    {
+     "text": "to",
+     "f": 60,
+     "e": 67
+    },
+    {
+     "text": "five",
+     "f": 67,
+     "e": 76
+    },
+    {
+     "text": "hundred",
+     "f": 76,
+     "e": 91
+    },
+    {
+     "text": "stars",
+     "f": 91,
+     "e": 102
+    },
+    {
+     "text": "on",
+     "f": 102,
+     "e": 109
+    },
+    {
+     "text": "Show",
+     "f": 109,
+     "e": 118
+    },
+    {
+     "text": "HN.",
+     "f": 118,
+     "e": 126
+    }
+   ]
+  },
+  {
+   "id": "S06Cta",
+   "from": 684,
+   "durationInFrames": 169,
+   "words": [
+    {
+     "text": "Comment",
+     "f": 3,
+     "e": 15
+    },
+    {
+     "text": "REPO",
+     "f": 15,
+     "e": 23
+    },
+    {
+     "text": "below",
+     "f": 23,
+     "e": 33
+    },
+    {
+     "text": "and",
+     "f": 33,
+     "e": 40
+    },
+    {
+     "text": "I",
+     "f": 40,
+     "e": 44
+    },
+    {
+     "text": "will",
+     "f": 44,
+     "e": 52
+    },
+    {
+     "text": "send",
+     "f": 52,
+     "e": 61
+    },
+    {
+     "text": "you",
+     "f": 61,
+     "e": 67
+    },
+    {
+     "text": "the",
+     "f": 67,
+     "e": 74
+    },
+    {
+     "text": "prompt",
+     "f": 74,
+     "e": 85
+    },
+    {
+     "text": "and",
+     "f": 85,
+     "e": 92
+    },
+    {
+     "text": "checklist.",
+     "f": 92,
+     "e": 109
+    }
+   ]
+  }
+ ],
+ "hook": {
+  "lines": [
+   [
+    "WANT 500"
+   ],
+   [
+    "STARS?"
+   ]
+  ],
+  "hot": [
+   "STARS?"
+  ],
+  "outAt": 75
+ }
+}
