@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F0E13"/>
+      <stop offset="50%" stop-color="#181520"/>
+      <stop offset="100%" stop-color="#0A090D"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D97757" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#D97757" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="purpleGlow" cx="20%" cy="80%" r="40%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bg)"/>
+  <rect width="1200" height="400" fill="url(#glow)"/>
+  <rect width="1200" height="400" fill="url(#purpleGlow)"/>
+
+  <!-- Subtle Blueprint Grid -->
+  <g opacity="0.08" stroke="#FFFFFF" stroke-width="1">
+    <line x1="0" y1="80" x2="1200" y2="80"/>
+    <line x1="0" y1="160" x2="1200" y2="160"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="320" x2="1200" y2="320"/>
+    <line x1="160" y1="0" x2="160" y2="400"/>
+    <line x1="320" y1="0" x2="320" y2="400"/>
+    <line x1="480" y1="0" x2="480" y2="400"/>
+    <line x1="640" y1="0" x2="640" y2="400"/>
+    <line x1="800" y1="0" x2="800" y2="400"/>
+    <line x1="960" y1="0" x2="960" y2="400"/>
+    <line x1="1120" y1="0" x2="1120" y2="400"/>
+  </g>
+
+  <!-- Top System Pill -->
+  <g transform="translate(60, 48)">
+    <rect width="260" height="28" rx="14" fill="#241E28" stroke="#3D3245" stroke-width="1"/>
+    <circle cx="16" cy="14" r="5" fill="#D97757"/>
+    <text x="32" y="18" fill="#D4CCE0" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" font-weight="600" letter-spacing="1.5">CLAUDE CODE • VIDEO ENGINE</text>
+  </g>
+
+  <!-- Title Section -->
+  <text x="60" y="140" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="44" font-weight="800" letter-spacing="-1">claude-video-playbook</text>
+  <text x="60" y="180" fill="#A89FB8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="18" font-weight="400">Autonomous Code-First AI Video Generation, Motion Graphics &amp; Papercraft Pipelines</text>
+
+  <!-- Pipeline Timeline Bar -->
+  <g transform="translate(60, 224)">
+    <!-- Stage 1 -->
+    <rect x="0" y="0" width="200" height="54" rx="8" fill="#1C1826" stroke="#2D263B" stroke-width="1.5"/>
+    <text x="16" y="24" fill="#D97757" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">01. SCRIPT &amp; PROMPT</text>
+    <text x="16" y="42" fill="#E2DCED" font-family="'Inter', sans-serif" font-size="13" font-weight="500">Claude Code Story Engine</text>
+
+    <!-- Arrow -->
+    <path d="M 214 27 L 226 27 M 222 22 L 227 27 L 222 32" stroke="#5E5073" stroke-width="2" fill="none"/>
+
+    <!-- Stage 2 -->
+    <rect x="240" y="0" width="200" height="54" rx="8" fill="#1C1826" stroke="#2D263B" stroke-width="1.5"/>
+    <text x="256" y="24" fill="#F5C542" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">02. NARRATION &amp; VO</text>
+    <text x="256" y="42" fill="#E2DCED" font-family="'Inter', sans-serif" font-size="13" font-weight="500">ElevenLabs Studio + TTS</text>
+
+    <!-- Arrow -->
+    <path d="M 454 27 L 466 27 M 462 22 L 467 27 L 462 32" stroke="#5E5073" stroke-width="2" fill="none"/>
+
+    <!-- Stage 3 -->
+    <rect x="480" y="0" width="200" height="54" rx="8" fill="#1C1826" stroke="#2D263B" stroke-width="1.5"/>
+    <text x="496" y="24" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">03. COMPOSITION</text>
+    <text x="496" y="42" fill="#E2DCED" font-family="'Inter', sans-serif" font-size="13" font-weight="500">Remotion React + GSAP</text>
+
+    <!-- Arrow -->
+    <path d="M 694 27 L 706 27 M 702 22 L 707 27 L 702 32" stroke="#5E5073" stroke-width="2" fill="none"/>
+
+    <!-- Stage 4 -->
+    <rect x="720" y="0" width="200" height="54" rx="8" fill="#1C1826" stroke="#2D263B" stroke-width="1.5"/>
+    <text x="736" y="24" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">04. RASTER &amp; MUX</text>
+    <text x="736" y="42" fill="#E2DCED" font-family="'Inter', sans-serif" font-size="13" font-weight="500">Headless Chromium + FFmpeg</text>
+  </g>
+
+  <!-- Bottom Tag Bar -->
+  <g transform="translate(60, 326)">
+    <rect width="1080" height="42" rx="6" fill="#13101C" stroke="#251E33" stroke-width="1"/>
+    <text x="20" y="26" fill="#8E85A2" font-family="'JetBrains Mono', monospace" font-size="12">
+      <tspan fill="#D97757" font-weight="700">CORE MODULES:</tspan> papercut-video • bang-motion • vox-explainer • huashu-art-motion • claude-drawing • 703+ opus recipes
+    </text>
+  </g>
+
+  <!-- Claude Spark Icon Right -->
+  <g transform="translate(1030, 70)" opacity="0.85">
+    <path d="M60 0 L72 38 L110 50 L72 62 L60 100 L48 62 L10 50 L48 38 Z" fill="#D97757"/>
+    <circle cx="60" cy="50" r="14" fill="#F4A7B9" opacity="0.6"/>
+  </g>
+</svg>
