@@ -1,0 +1,27 @@
+[
+  {
+    "id": "h1_dev",
+    "speaker": "developer",
+    "text": "Hey Claude, I am so tired of shipping heavy Electron apps that eat two gigabytes of RAM just for a simple UI."
+  },
+  {
+    "id": "s1_claude",
+    "speaker": "claude",
+    "text": "Try Rune. It is a brand new GPU rendered Rust UI framework from Anomaly, built with its own layout, springs, and wgpu backend."
+  },
+  {
+    "id": "s2_claude",
+    "speaker": "claude",
+    "text": "Zero Chromium, zero Node.js. It cuts idle memory from five hundred megs down to just eighteen, and apps compile into tiny native binaries."
+  },
+  {
+    "id": "s3_claude",
+    "speaker": "claude",
+    "text": "Even better, Rune runs headless out of the box so AI agents can drive, inspect, and test UI directly in memory without a browser driver."
+  },
+  {
+    "id": "cta_claude",
+    "speaker": "claude",
+    "text": "Comment RUNE and check the pinned comment for the GitHub repository and getting started prompt."
+  }
+]

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rune Hook Preview</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #07090e; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    #canvas-wrap { width: 1080px; height: 1920px; position: absolute; left: 0; top: 0; transform-origin: top left; }
+    canvas { display: block; width: 1080px; height: 1920px; }
+  </style>
+</head>
+<body>
+  <div id="canvas-wrap">
+    <canvas id="stage" width="1080" height="1920"></canvas>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('stage');
+    const ctx = canvas.getContext('2d');
+    const W = 1080, H = 1920;
+
+    // Load benchmark image
+    const imgBench = new Image();
+    imgBench.src = 'assets/benchmark_card.png';
+
+    const imgRepo = new Image();
+    imgRepo.src = 'assets/rune_card.png';
+
+    window.renderFrame = function(frameIndex) {
+      const t = frameIndex / 24.0;
+      ctx.clearRect(0, 0, W, H);
+
+      // 1. Sleek Modern Dark Backdrop with ambient gradient
+      const bgGrad = ctx.createRadialGradient(W / 2, 600, 50, W / 2, 700, 1100);
+      bgGrad.addColorStop(0, '#151a28');
+      bgGrad.addColorStop(0.5, '#0b0e17');
+      bgGrad.addColorStop(1, '#05070a');
+      ctx.fillStyle = bgGrad;
+      ctx.fillRect(0, 0, W, H);
+
+      // Subtle cyber grid overlay
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.03)';
+      ctx.lineWidth = 1;
+      for (let x = 0; x < W; x += 60) {
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+      }
+      for (let y = 0; y < H; y += 60) {
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+      }
+
+      // 2. Urgent Hook Header Pill
+      const pillScale = Math.min(t * 5, 1);
+      ctx.save();
+      ctx.translate(W / 2, 220);
+      ctx.scale(pillScale, pillScale);
+
+      // Glowing outer rim
+      ctx.shadowColor = 'rgba(239, 68, 68, 0.4)';
+      ctx.shadowBlur = 24;
+      ctx.fillStyle = 'rgba(239, 68, 68, 0.15)';
+      ctx.strokeStyle = '#ef4444';
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      ctx.roundRect(-240, -32, 480, 64, 32);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.shadowBlur = 0;
+      ctx.font = '800 24px -apple-system, sans-serif';
+      ctx.fillStyle = '#f87171';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('TIRED OF ELECTRON APPS?', 0, 0);
+      ctx.restore();
+
+      // 3. Spoken Dialogue Bubble / Subtitle Card (Middle-Top)
+      ctx.save();
+      ctx.translate(W / 2, 380);
+
+      // Developer Speaker Tag
+      ctx.fillStyle = '#3b82f6';
+      ctx.beginPath();
+      ctx.roundRect(-80, -70, 160, 36, 12);
+      ctx.fill();
+      ctx.font = '800 18px -apple-system, sans-serif';
+      ctx.fillStyle = '#ffffff';
+      ctx.textAlign = 'center';
+      ctx.fillText('DEVELOPER', 0, -47);
+
+      // Kinetic Dialogue Text
+      ctx.font = '700 42px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+      ctx.fillStyle = '#ffffff';
+      ctx.textAlign = 'center';
+      ctx.shadowColor = 'rgba(0,0,0,0.8)';
+      ctx.shadowBlur = 16;
+      ctx.fillText('"Hey Claude, I am so tired of shipping', 0, 0);
+      ctx.fillText('heavy Electron apps that eat 2 GB of RAM."', 0, 56);
+      ctx.restore();
+
+      // 4. Motion Graphic Card: Real Benchmark Comparison Card
+      // Smooth slide-up with spring ease
+      const cardY = 620 + Math.max(0, (1 - Math.min(t * 3.2, 1)) * 400);
+      const cardAlpha = Math.min(t * 4, 1);
+
+      ctx.save();
+      ctx.globalAlpha = cardAlpha;
+      ctx.translate(W / 2 - 500, cardY);
+
+      // Glass card backplate shadow
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.65)';
+      ctx.shadowBlur = 40;
+      ctx.shadowOffsetY = 20;
+
+      // Draw real rendered benchmark card (1000px wide, 633px tall)
+      if (imgBench.complete) {
+        ctx.drawImage(imgBench, 0, 0, 1000, 633);
+      } else {
+        ctx.fillStyle = '#131722';
+        ctx.fillRect(0, 0, 1000, 633);
+      }
+      ctx.restore();
+
+      // 5. Lower Accent Banner: RAM Cost Callout
+      if (t > 1.2) {
+        const pulse = Math.sin(t * 10) * 0.05 + 1;
+        ctx.save();
+        ctx.translate(W / 2, 1380);
+        ctx.scale(pulse, pulse);
+
+        ctx.fillStyle = 'rgba(239, 68, 68, 0.2)';
+        ctx.strokeStyle = '#ef4444';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.roundRect(-360, -40, 720, 80, 20);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.font = '800 28px -apple-system, sans-serif';
+        ctx.fillStyle = '#fca5a5';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('Chromium Baseline: 450 MB - 1.2 GB IDLE', 0, 0);
+        ctx.restore();
+      }
+
+      // 6. Audio status & Watermark
+      ctx.save();
+      ctx.font = '600 20px -apple-system, sans-serif';
+      ctx.fillStyle = '#64748b';
+      ctx.textAlign = 'center';
+      ctx.fillText('claude-video-playbook · example 03', W / 2, 1840);
+      ctx.restore();
+    };
+
+    window.renderFrame(30);
+  </script>
+</body>
+</html>

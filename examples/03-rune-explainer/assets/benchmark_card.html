@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  body { background: #0b0d13; color: #fff; width: 1200px; height: 760px; padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+  .title { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 32px; text-align: center; }
+  .title span { color: #f87171; text-decoration: line-through; margin-right: 14px; }
+  .title b { color: #4ade80; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .card { background: #131722; border: 1px solid #232936; border-radius: 14px; padding: 32px; position: relative; }
+  .card.bad { border-color: rgba(239, 68, 68, 0.4); }
+  .card.good { border-color: rgba(34, 197, 94, 0.4); box-shadow: 0 8px 32px rgba(34, 197, 94, 0.1); }
+  .badge { display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px; }
+  .badge.bad { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+  .badge.good { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
+  .name { font-size: 26px; font-weight: 700; margin-bottom: 12px; }
+  .stat-row { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid #1e2433; font-size: 16px; color: #94a3b8; }
+  .stat-row b { color: #fff; font-size: 17px; }
+  .stat-row:last-child { border-bottom: none; }
+  .metric-bar { height: 10px; border-radius: 5px; background: #1e2433; overflow: hidden; margin-top: 8px; }
+  .metric-fill { height: 100%; border-radius: 5px; }
+</style>
+</head>
+<body>
+  <div class="title">
+    <span>Electron Architecture</span> <b>Native GPU (Rune)</b>
+  </div>
+  <div class="grid">
+    <div class="card bad">
+      <div class="badge bad">Legacy Stack</div>
+      <div class="name">Electron / Webview</div>
+      <div class="stat-row">
+        <span>RAM Baseline</span>
+        <b style="color:#f87171;">450 MB – 1.2 GB</b>
+      </div>
+      <div class="metric-bar"><div class="metric-fill" style="width: 85%; background: #ef4444;"></div></div>
+      <div class="stat-row" style="margin-top: 14px;">
+        <span>Runtime</span>
+        <b>Bundled Chromium + Node.js</b>
+      </div>
+      <div class="stat-row">
+        <span>App Binary Size</span>
+        <b>~140 MB minimum</b>
+      </div>
+      <div class="stat-row">
+        <span>AI Agent Testability</span>
+        <b>Slow CDP headless driver</b>
+      </div>
+    </div>
+
+    <div class="card good">
+      <div class="badge good">Next Gen</div>
+      <div class="name">Rune (Rust + WGPU)</div>
+      <div class="stat-row">
+        <span>RAM Baseline</span>
+        <b style="color:#4ade80;">18 MB – 35 MB (-95%)</b>
+      </div>
+      <div class="metric-bar"><div class="metric-fill" style="width: 12%; background: #22c55e;"></div></div>
+      <div class="stat-row" style="margin-top: 14px;">
+        <span>Runtime</span>
+        <b>Direct Metal / Vulkan / DirectX</b>
+      </div>
+      <div class="stat-row">
+        <span>App Binary Size</span>
+        <b>~6.8 MB lean binary</b>
+      </div>
+      <div class="stat-row">
+        <span>AI Agent Testability</span>
+        <b>Native in-memory headless PNG render</b>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
