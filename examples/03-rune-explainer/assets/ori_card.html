@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  body { background: #0b0f19; color: #fff; width: 1200px; height: 760px; padding: 36px 44px; display: flex; flex-direction: column; justify-content: center; }
+  .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; border-bottom: 1px solid #1f293d; padding-bottom: 16px; }
+  .title { font-size: 28px; font-weight: 800; display: flex; align-items: center; gap: 12px; }
+  .badge { background: rgba(56, 189, 248, 0.15); border: 1px solid #38bdf8; color: #38bdf8; padding: 4px 14px; border-radius: 20px; font-size: 13px; font-weight: 700; text-transform: uppercase; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .box { background: #111827; border: 1px solid #1f293d; border-radius: 12px; padding: 24px; }
+  .box-title { font-size: 18px; font-weight: 700; color: #94a3b8; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .cli-snippet { background: #070a12; border: 1px solid #1f293d; border-radius: 6px; padding: 14px 18px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 15px; color: #38bdf8; line-height: 1.6; margin-bottom: 12px; }
+  .cli-snippet .cmt { color: #64748b; }
+  .feature-list { list-style: none; font-size: 15px; color: #cbd5e1; line-height: 1.8; }
+  .feature-list li::before { content: "⚡ "; color: #f59e0b; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">
+      <span>OpenRouter Ori</span>
+      <span class="badge">Just Shipped</span>
+    </div>
+    <div style="font-size: 15px; color: #94a3b8;">openrouter.ai/ori · Unified Harness for AI Coding Agents</div>
+  </div>
+
+  <div class="grid">
+    <div class="box">
+      <div class="box-title">Launch Coding Agents On Any Model</div>
+      <div class="cli-snippet">
+        <span class="cmt"># One command across 400+ models</span><br>
+        $ ori claude<br>
+        $ ori codex<br>
+        $ ori hermes
+      </div>
+      <ul class="feature-list">
+        <li>Zero token markup: unified key across all frontier models</li>
+        <li>Native terminal coding agent (Ori Code)</li>
+        <li>Automatic fallback routing & budget enforcement</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <div class="box-title">Lightweight Native Desktop (No Electron)</div>
+      <div class="cli-snippet">
+        <span class="cmt"># Runs directly from OS menu bar</span><br>
+        $ ori desktop --lightweight<br>
+        <span style="color:#10b981;">✓ RAM: 22 MB baseline (vs 800 MB Electron)</span>
+      </div>
+      <ul class="feature-list">
+        <li>Send tasks to any model directly from the Mac menu bar</li>
+        <li>Runs headlessly for cron and background automations</li>
+        <li>Native wgpu and terminal rendering with zero webview overhead</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rune Papercraft Explainer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #0B0910; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    canvas { display: block; width: 1080px; height: 1920px; }
+  </style>
+</head>
+<body>
+  <canvas id="stage" width="1080" height="1920"></canvas>
+  <script>
+    const canvas = document.getElementById('stage');
+    const ctx = canvas.getContext('2d');
+    const W = 1080, H = 1920;
+
+    // Load assets
+    const imgBench = new Image(); imgBench.src = 'assets/benchmark_card.png';
+    const imgRepo = new Image(); imgRepo.src = 'assets/rune_card.png';
+    const imgOri = new Image(); imgOri.src = 'assets/ori_card.png';
+
+    // Helpers: Tactile Paper Craft Shadow
+    function paperShadow(x, y, w, h, r = 16) {
+      ctx.save();
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.55)';
+      ctx.shadowBlur = 32;
+      ctx.shadowOffsetY = 16;
+      ctx.fillStyle = '#141724';
+      ctx.beginPath();
+      ctx.roundRect(x, y, w, h, r);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    // Helper: Paper Tape Strip
+    function paperTape(x, y, w, h, rot = -2) {
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(rot * Math.PI / 180);
+      ctx.fillStyle = 'rgba(255, 238, 187, 0.85)';
+      ctx.strokeStyle = 'rgba(212, 192, 140, 0.6)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.roundRect(-w/2, -h/2, w, h, 4);
+      ctx.fill();
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    // Helper: Draw Claude Paper Mascot (Present throughout entire video!)
+    function drawClaudeMascot(x, y, t, isSpeaking, expr = 'idle') {
+      ctx.save();
+      ctx.translate(x, y);
+
+      const bob = Math.sin(t * 12) * (isSpeaking ? 5 : 1.5);
+      const armTilt = isSpeaking ? Math.sin(t * 8) * 16 : 0;
+
+      // 1. Cast shadow
+      ctx.save();
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.45)';
+      ctx.shadowBlur = 20;
+      ctx.shadowOffsetY = 12;
+
+      // 2. Terracotta paper body slab
+      ctx.fillStyle = '#D97757';
+      ctx.beginPath();
+      ctx.roundRect(-60, -70 + bob, 120, 110, 36);
+      ctx.fill();
+      ctx.restore();
+
+      // Body deckle edge & shade
+      ctx.fillStyle = '#B55B3E';
+      ctx.beginPath();
+      ctx.roundRect(-52, 12 + bob, 104, 24, [0, 0, 24, 24]);
+      ctx.fill();
+
+      // Stubby paper feet
+      ctx.fillStyle = '#9C442B';
+      ctx.beginPath();
+      ctx.roundRect(-42, 38, 32, 18, 8);
+      ctx.roundRect(10, 38, 32, 18, 8);
+      ctx.fill();
+
+      // Animated Arm
+      ctx.save();
+      ctx.translate(56, -20 + bob);
+      ctx.rotate((15 + armTilt) * Math.PI / 180);
+      ctx.fillStyle = '#D97757';
+      ctx.beginPath();
+      ctx.roundRect(0, -10, 48, 20, 10);
+      ctx.fill();
+      ctx.restore();
+
+      // Left resting arm
+      ctx.fillStyle = '#D97757';
+      ctx.beginPath();
+      ctx.roundRect(-76, -10 + bob, 24, 42, 10);
+      ctx.fill();
+
+      // Head Eyes & Spark
+      ctx.save();
+      ctx.translate(0, -32 + bob);
+
+      // Big curious eyes
+      const blink = Math.sin(t * 3) > 0.94;
+      if (!blink) {
+        ctx.fillStyle = '#110D17';
+        ctx.beginPath();
+        ctx.ellipse(-22, 0, 9, 14, -0.05, 0, Math.PI * 2);
+        ctx.ellipse(22, 0, 9, 14, 0.05, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = '#FFFFFF';
+        ctx.beginPath();
+        ctx.arc(-24, -4, 3.5, 0, Math.PI * 2);
+        ctx.arc(20, -4, 3.5, 0, Math.PI * 2);
+        ctx.fill();
+      } else {
+        ctx.strokeStyle = '#110D17';
+        ctx.lineWidth = 3.5;
+        ctx.beginPath();
+        ctx.arc(-22, 2, 9, 0.2, Math.PI - 0.2);
+        ctx.arc(22, 2, 9, 0.2, Math.PI - 0.2);
+        ctx.stroke();
+      }
+
+      // Golden 4-point Spark on top
+      ctx.save();
+      ctx.translate(0, -48);
+      ctx.fillStyle = '#F5C542';
+      ctx.strokeStyle = '#8F6B12';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      const R = 16, r = 5;
+      for (let p = 0; p < 8; p++) {
+        const rad = p * Math.PI / 4;
+        const dist = p % 2 === 0 ? R : r;
+        const px = Math.cos(rad) * dist, py = Math.sin(rad) * dist;
+        p === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py);
+      }
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.restore();
+
+      ctx.restore(); // Eyes
+
+      // Name Pill beneath Claude
+      ctx.fillStyle = '#B55B3E';
+      ctx.beginPath();
+      ctx.roundRect(-54, 62, 108, 26, 12);
+      ctx.fill();
+      ctx.font = '800 13px -apple-system, sans-serif';
+      ctx.fillStyle = '#FFFFFF';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('CLAUDE MC', 0, 75);
+
+      ctx.restore();
+    }
+
+    // Main Renderer
+    window.renderFrame = function(frameIndex) {
+      const t = frameIndex / 24.0;
+      ctx.clearRect(0, 0, W, H);
+
+      // 1. Dark Textured Studio Paper Background
+      ctx.fillStyle = '#0C0A14';
+      ctx.fillRect(0, 0, W, H);
+
+      // Subtle warm vignette & paper deckle grid
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.025)';
+      ctx.lineWidth = 1;
+      for (let x = 0; x < W; x += 72) {
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+      }
+      for (let y = 0; y < H; y += 72) {
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+      }
+
+      // 2. Top Header Navigation Banner (Tactile Papercraft Pill)
+      ctx.save();
+      paperShadow(W / 2 - 320, 140, 640, 72, 36);
+      ctx.fillStyle = '#1A1829';
+      ctx.strokeStyle = '#322F4D';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.roundRect(W / 2 - 320, 140, 640, 72, 36);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.font = '800 24px -apple-system, sans-serif';
+      ctx.fillStyle = '#F59E0B';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('⚡ NATIVE GPU ARCHITECTURE · ZERO ELECTRON', W / 2, 176);
+      ctx.restore();
+
+      // 3. Central Stage: Depends on Timeline
+      if (t < 5.4) {
+        // --- SCENE 1: HOOK (Teenager Anxious About Electron) ---
+        // Paper Card: Developer Statement
+        paperShadow(120, 320, 840, 180, 24);
+        ctx.fillStyle = '#141B2D';
+        ctx.strokeStyle = '#3B82F6';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.roundRect(120, 320, 840, 180, 24);
+        ctx.fill();
+        ctx.stroke();
+        paperTape(120 + 80, 320, 110, 28, -6);
+
+        // Speaker Pill
+        ctx.fillStyle = '#3B82F6';
+        ctx.beginPath();
+        ctx.roundRect(160, 350, 140, 34, 12);
+        ctx.fill();
+        ctx.font = '800 16px -apple-system, sans-serif';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.textAlign = 'center';
+        ctx.fillText('DEVELOPER', 230, 368);
+
+        // Quote text
+        ctx.font = '700 34px -apple-system, sans-serif';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.textAlign = 'left';
+        ctx.fillText('"I am so tired of shipping heavy Electron apps', 160, 425);
+        ctx.fillText('that eat 2 GB of RAM just for a simple UI."', 160, 468);
+
+        // Visual: Benchmark Card Snap
+        paperShadow(90, 560, 900, 570, 20);
+        if (imgBench.complete) {
+          ctx.drawImage(imgBench, 90, 560, 900, 570);
+        }
+
+        // Pop callout
+        ctx.fillStyle = '#EF4444';
+        ctx.beginPath();
+        ctx.roundRect(W / 2 - 280, 1180, 560, 60, 16);
+        ctx.fill();
+        ctx.font = '800 22px -apple-system, sans-serif';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.textAlign = 'center';
+        ctx.fillText('MEMORY BLOAT: 450 MB – 1.2 GB IDLE', W / 2, 1218);
+
+      } else if (t < 15.0) {
+        // --- SCENE 2: INTRODUCING RUNE (Anomaly Rune Repo Card) ---
+        paperShadow(100, 300, 880, 170, 24);
+        ctx.fillStyle = '#1F1A2B';
+        ctx.strokeStyle = '#D97757';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.roundRect(100, 300, 880, 170, 24);
+        ctx.fill();
+        ctx.stroke();
+        paperTape(W / 2, 300, 140, 30, 2);
+
+        // Speaker Pill
+        ctx.fillStyle = '#D97757';
+        ctx.beginPath();
+        ctx.roundRect(140, 330, 140, 34, 12);
+        ctx.fill();
+        ctx.font = '800 16px -apple-system, sans-serif';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.textAlign = 'center';
+        ctx.fillText('CLAUDE MC', 210, 348);
+
+        ctx.font = '700 32px -apple-system, sans-serif';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.textAlign = 'left';
+        ctx.fillText('"Try Rune. It is a brand new GPU rendered Rust', 140, 405);
+        ctx.fillText('UI framework built with its own wgpu backend."', 140, 445);
+
+        // Visual: Real GitHub Repo Card
+        paperShadow(90, 520, 900, 570, 20);
+        if (imgRepo.complete) {
+          ctx.drawImage(imgRepo, 90, 520, 900, 570);
+        }
+
+        // Feature stamps
+        ctx.fillStyle = '#10B981';
+        ctx.beginPath();
+        ctx.roundRect(120, 1140, 380, 54, 14);
+        ctx.fill();
+        ctx.font = '800 20px -apple-system, sans-serif';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.textAlign = 'center';
+        ctx.fillText('✓ NATIVE WGPU SPRINGS', 310, 1174);
+
+        ctx.fillStyle = '#6366F1';
+        ctx.beginPath();
+        ctx.roundRect(540, 1140, 420, 54, 14);
+        ctx.fill();
+        ctx.font = '800 20px -apple-system, sans-serif';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.fillText('⭐ 4,180+ STARS ON GITHUB', 750, 1174);
+
+      } else if (t < 24.6) {
+        // --- SCENE 3: THE -95% RAM BENCHMARK ---
+        paperShadow(100, 300, 880, 170, 24);
+        ctx.fillStyle = '#1F1A2B';
+        ctx.strokeStyle = '#D97757';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.roundRect(100, 300, 880, 170, 24);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = '#D97757';
+        ctx.beginPath();
+        ctx.roundRect(140, 330, 140, 34, 12);
+        ctx.fill();
+        ctx.font = '800 16px -apple-system, sans-serif';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.textAlign = 'center';
+        ctx.fillText('CLAUDE MC', 210, 348);
+
+        ctx.font = '700 32px -apple-system, sans-serif';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.textAlign = 'left';
+        ctx.fillText('"Zero Chromium, zero Node.js. It cuts idle memory', 140, 405);
+        ctx.fillText('from 500 megs down to 18, with tiny lean binaries."', 140, 445);
+
+        // Visual: Benchmark Card Snap
+        paperShadow(90, 520, 900, 570, 20);
+        if (imgBench.complete) {
+          ctx.drawImage(imgBench, 90, 520, 900, 570);
+        }
+
+        ctx.fillStyle = '#22C55E';
+        ctx.beginPath();
+        ctx.roundRect(W / 2 - 320, 1140, 640, 60, 16);
+        ctx.fill();
+        ctx.font = '800 24px -apple-system, sans-serif';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.textAlign = 'center';
+        ctx.fillText('🔥 95% RAM REDUCTION · 6.8 MB BINARY', W / 2, 1178);
+
+      } else if (t < 33.0) {
+        // --- SCENE 4: OPENROUTER ORI SHIPPED ---
+        paperShadow(100, 300, 880, 170, 24);
+        ctx.fillStyle = '#0F1D30';
+        ctx.strokeStyle = '#38BDF8';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.roundRect(100, 300, 880, 170, 24);
+        ctx.fill();
+        ctx.stroke();
+        paperTape(100 + 120, 300, 130, 28, -4);
+
+        ctx.fillStyle = '#38BDF8';
+        ctx.beginPath();
+        ctx.roundRect(140, 330, 180, 34, 12);
+        ctx.fill();
+        ctx.font = '800 16px -apple-system, sans-serif';
+        ctx.fillStyle = '#0B1120';
+        ctx.textAlign = 'center';
+        ctx.fillText('OPENROUTER ORI', 230, 348);
+
+        ctx.font = '700 32px -apple-system, sans-serif';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.textAlign = 'left';
+        ctx.fillText('"And the OpenRouter team just shipped Ori,', 140, 405);
+        ctx.fillText('running agents on any model without Electron bloat."', 140, 445);
+
+        // Visual: Real OpenRouter Ori Card
+        paperShadow(90, 520, 900, 570, 20);
+        if (imgOri.complete) {
+          ctx.drawImage(imgOri, 90, 520, 900, 570);
+        }
+
+        ctx.fillStyle = '#38BDF8';
+        ctx.beginPath();
+        ctx.roundRect(W / 2 - 340, 1140, 680, 60, 16);
+        ctx.fill();
+        ctx.font = '800 22px -apple-system, sans-serif';
+        ctx.fillStyle = '#070C18';
+        ctx.textAlign = 'center';
+        ctx.fillText('🚀 UNIFIED HARNESS · 22 MB MENU BAR DESKTOP', W / 2, 1178);
+
+      } else if (t < 41.2) {
+        // --- SCENE 5: HEADLESS AGENT DRIVER ---
+        paperShadow(100, 300, 880, 170, 24);
+        ctx.fillStyle = '#1F1A2B';
+        ctx.strokeStyle = '#D97757';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.roundRect(100, 300, 880, 170, 24);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = '#D97757';
+        ctx.beginPath();
+        ctx.roundRect(140, 330, 140, 34, 12);
+        ctx.fill();
+        ctx.font = '800 16px -apple-system, sans-serif';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.textAlign = 'center';
+        ctx.fillText('CLAUDE MC', 210, 348);
+
+        ctx.font = '700 32px -apple-system, sans-serif';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.textAlign = 'left';
+        ctx.fillText('"Rune runs headless out of the box so AI agents', 140, 405);
+        ctx.fillText('can drive, inspect, and test UI directly in memory."', 140, 445);
+
+        // Visual: GitHub Card with code
+        paperShadow(90, 520, 900, 570, 20);
+        if (imgRepo.complete) {
+          ctx.drawImage(imgRepo, 90, 520, 900, 570);
+        }
+
+        ctx.fillStyle = '#F59E0B';
+        ctx.beginPath();
+        ctx.roundRect(W / 2 - 320, 1140, 640, 60, 16);
+        ctx.fill();
+        ctx.font = '800 22px -apple-system, sans-serif';
+        ctx.fillStyle = '#1A1002';
+        ctx.textAlign = 'center';
+        ctx.fillText('🤖 AGENT TESTABLE: PNG RENDER & ELEMENT TREE', W / 2, 1178);
+
+      } else {
+        // --- SCENE 6: CTA (Comment RUNE + Check Pinned Comment) ---
+        paperShadow(100, 420, 880, 380, 28);
+        ctx.fillStyle = '#1A1829';
+        ctx.strokeStyle = '#F59E0B';
+        ctx.lineWidth = 4;
+        ctx.beginPath();
+        ctx.roundRect(100, 420, 880, 380, 28);
+        ctx.fill();
+        ctx.stroke();
+        paperTape(W / 2, 420, 180, 34, -2);
+
+        // Pinned Badge
+        ctx.fillStyle = '#F59E0B';
+        ctx.beginPath();
+        ctx.roundRect(W / 2 - 140, 470, 280, 46, 23);
+        ctx.fill();
+        ctx.font = '800 20px -apple-system, sans-serif';
+        ctx.fillStyle = '#181002';
+        ctx.textAlign = 'center';
+        ctx.fillText('📌 CHECK PINNED COMMENT', W / 2, 498);
+
+        ctx.font = '900 68px -apple-system, sans-serif';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.fillText('COMMENT "RUNE"', W / 2, 600);
+
+        ctx.font = '600 28px -apple-system, sans-serif';
+        ctx.fillStyle = '#94A3B8';
+        ctx.fillText('For GitHub Repo, Ori Guide & Agent Prompt', W / 2, 660);
+
+        ctx.fillStyle = '#D97757';
+        ctx.beginPath();
+        ctx.roundRect(W / 2 - 280, 710, 560, 54, 16);
+        ctx.fill();
+        ctx.font = '800 22px -apple-system, sans-serif';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.fillText('👉 github.com/anomalyco/rune', W / 2, 744);
+      }
+
+      // 4. CLAUDE CHARACTER (Permanent Host on Stage)
+      // Placed on lower-right in full tactile papercraft style
+      const claudeSpeaking = (t >= 5.4);
+      drawClaudeMascot(880, 1540, t, claudeSpeaking);
+
+      // 5. Watermark & Episode Footer
+      ctx.font = '600 18px -apple-system, sans-serif';
+      ctx.fillStyle = '#475569';
+      ctx.textAlign = 'center';
+      ctx.fillText('claude-video-playbook · episode 03 · rune & ori', W / 2, 1860);
+    };
+
+    window.renderFrame(100);
+  </script>
+</body>
+</html>

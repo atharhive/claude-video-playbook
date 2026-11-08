@@ -1,7 +1,7 @@
 [
   {
-    "id": "h1_dev",
-    "speaker": "developer",
+    "id": "h1_teen",
+    "speaker": "teenager",
     "text": "Hey Claude, I am so tired of shipping heavy Electron apps that eat two gigabytes of RAM just for a simple UI."
   },
   {
@@ -17,11 +17,16 @@
   {
     "id": "s3_claude",
     "speaker": "claude",
-    "text": "Even better, Rune runs headless out of the box so AI agents can drive, inspect, and test UI directly in memory without a browser driver."
+    "text": "And the OpenRouter team just shipped Ori, letting agents run any model straight into lightweight desktop and terminal harnesses without Electron bloat."
+  },
+  {
+    "id": "s4_claude",
+    "speaker": "claude",
+    "text": "Even better, Rune runs headless out of the box so AI agents can drive, inspect, and test UI directly in memory."
   },
   {
     "id": "cta_claude",
     "speaker": "claude",
-    "text": "Comment RUNE and check the pinned comment for the GitHub repository and getting started prompt."
+    "text": "Comment RUNE and check the pinned comment for the full toolkit, GitHub repository, and agent prompt."
   }
 ]
