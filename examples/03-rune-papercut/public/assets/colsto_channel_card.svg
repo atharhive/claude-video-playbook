@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="ytCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181524"/>
+      <stop offset="100%" stop-color="#0E0B17"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" rx="16" fill="url(#ytCardBg)" stroke="#352A4A" stroke-width="2"/>
+
+  <!-- Top Bar: Channel Header -->
+  <g transform="translate(40, 36)">
+    <!-- Avatar -->
+    <circle cx="36" cy="36" r="36" fill="#D97757"/>
+    <text x="36" y="44" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="28" font-weight="800" text-anchor="middle">C</text>
+
+    <!-- Channel Details -->
+    <text x="92" y="30" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="24" font-weight="800">colsto</text>
+    <path d="M 172 16 L 176 24 L 185 24 L 178 29 L 181 37 L 172 32 L 163 37 L 166 29 L 159 24 L 168 24 Z" fill="#9CA3AF"/>
+    <text x="92" y="52" fill="#9CA3AF" font-family="'Inter', sans-serif" font-size="15">@colsto_ • 105K subscribers • OSINT Investigator</text>
+  </g>
+
+  <!-- Video Thumbnail Card -->
+  <g transform="translate(40, 130)">
+    <!-- Video Player Preview Frame -->
+    <rect width="720" height="230" rx="12" fill="#050508" stroke="#251F33" stroke-width="1.5"/>
+
+    <!-- Spectrogram Wave in Thumbnail -->
+    <path d="M 40 130 C 180 135, 280 150, 360 185 C 440 220, 560 215, 680 210" fill="none" stroke="#38BDF8" stroke-width="5" opacity="0.9"/>
+    <path d="M 40 70 C 180 75, 280 90, 360 125 C 440 160, 560 155, 680 150" fill="none" stroke="#F5C542" stroke-width="3.5" opacity="0.8"/>
+
+    <!-- Target Pin -->
+    <circle cx="360" cy="185" r="16" fill="none" stroke="#EF4444" stroke-width="2.5"/>
+    <circle cx="360" cy="185" r="4" fill="#EF4444"/>
+
+    <!-- YouTube Red Play Badge -->
+    <rect x="40" y="30" width="48" height="34" rx="8" fill="#EF4444"/>
+    <polygon points="58,40 58,54 70,47" fill="#FFFFFF"/>
+
+    <!-- Duration Badge -->
+    <rect x="630" y="180" width="66" height="28" rx="4" fill="#000000" opacity="0.8"/>
+    <text x="663" y="199" fill="#FFFFFF" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" text-anchor="middle">29:12</text>
+  </g>
+
+  <!-- Video Title & Proof Metrics -->
+  <g transform="translate(40, 385)">
+    <text x="0" y="24" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="19" font-weight="700">"I discovered a sound that leaks your exact location"</text>
+    <text x="0" y="52" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="600">Viral OSINT Demonstration • 450K+ Views • Doppler Acoustic Geolocation</text>
+  </g>
+</svg>

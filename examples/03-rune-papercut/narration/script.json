@@ -1,0 +1,32 @@
+[
+  {
+    "id": "l1_hook",
+    "speaker": "teenager",
+    "text": "Hey Claude, I am so tired of shipping heavy Electron apps that eat two gigabytes of RAM."
+  },
+  {
+    "id": "l2_rune",
+    "speaker": "claude",
+    "text": "Try Rune. It is a brand new GPU rendered Rust UI framework from Anomaly, built with native wgpu springs."
+  },
+  {
+    "id": "l3_benchmark",
+    "speaker": "claude",
+    "text": "Zero Chromium, zero Node.js. It cuts idle memory from five hundred megs down to eighteen, inside a tiny binary."
+  },
+  {
+    "id": "l4_openrouter",
+    "speaker": "claude",
+    "text": "And the OpenRouter team just shipped Ori, letting agents run any model straight into lightweight desktop and terminal harnesses."
+  },
+  {
+    "id": "l5_headless",
+    "speaker": "claude",
+    "text": "Even better, Rune runs headless out of the box so AI agents can drive and inspect UI directly in memory."
+  },
+  {
+    "id": "l6_cta",
+    "speaker": "claude",
+    "text": "Comment RUNE below to get the full open source toolkit, and check the pinned comment for details!"
+  }
+]

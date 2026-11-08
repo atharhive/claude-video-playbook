@@ -1,0 +1,619 @@
+{
+ "fps": 30,
+ "durationInFrames": 1268,
+ "scenes": [
+  {
+   "id": "S01AnxiousHook",
+   "from": 0,
+   "durationInFrames": 126,
+   "words": [
+    {
+     "text": "Hey",
+     "f": 6,
+     "e": 13
+    },
+    {
+     "text": "Claude,",
+     "f": 13,
+     "e": 20
+    },
+    {
+     "text": "I",
+     "f": 20,
+     "e": 26
+    },
+    {
+     "text": "am",
+     "f": 26,
+     "e": 33
+    },
+    {
+     "text": "so",
+     "f": 33,
+     "e": 40
+    },
+    {
+     "text": "tired",
+     "f": 40,
+     "e": 47
+    },
+    {
+     "text": "of",
+     "f": 47,
+     "e": 53
+    },
+    {
+     "text": "shipping",
+     "f": 53,
+     "e": 60
+    },
+    {
+     "text": "heavy",
+     "f": 60,
+     "e": 67
+    },
+    {
+     "text": "Electron",
+     "f": 67,
+     "e": 74
+    },
+    {
+     "text": "apps",
+     "f": 74,
+     "e": 80
+    },
+    {
+     "text": "that",
+     "f": 80,
+     "e": 87
+    },
+    {
+     "text": "eat",
+     "f": 87,
+     "e": 94
+    },
+    {
+     "text": "two",
+     "f": 94,
+     "e": 101
+    },
+    {
+     "text": "gigabytes",
+     "f": 101,
+     "e": 108
+    },
+    {
+     "text": "of",
+     "f": 108,
+     "e": 114
+    },
+    {
+     "text": "RAM.",
+     "f": 114,
+     "e": 121
+    }
+   ]
+  },
+  {
+   "id": "S02RuneIntro",
+   "from": 126,
+   "durationInFrames": 263,
+   "words": [
+    {
+     "text": "Try",
+     "f": 3,
+     "e": 16
+    },
+    {
+     "text": "Rune.",
+     "f": 16,
+     "e": 29
+    },
+    {
+     "text": "It",
+     "f": 29,
+     "e": 43
+    },
+    {
+     "text": "is",
+     "f": 43,
+     "e": 56
+    },
+    {
+     "text": "a",
+     "f": 56,
+     "e": 70
+    },
+    {
+     "text": "brand",
+     "f": 70,
+     "e": 83
+    },
+    {
+     "text": "new",
+     "f": 83,
+     "e": 97
+    },
+    {
+     "text": "GPU",
+     "f": 97,
+     "e": 110
+    },
+    {
+     "text": "rendered",
+     "f": 110,
+     "e": 123
+    },
+    {
+     "text": "Rust",
+     "f": 123,
+     "e": 137
+    },
+    {
+     "text": "UI",
+     "f": 137,
+     "e": 150
+    },
+    {
+     "text": "framework",
+     "f": 150,
+     "e": 164
+    },
+    {
+     "text": "from",
+     "f": 164,
+     "e": 177
+    },
+    {
+     "text": "Anomaly,",
+     "f": 177,
+     "e": 190
+    },
+    {
+     "text": "built",
+     "f": 190,
+     "e": 204
+    },
+    {
+     "text": "with",
+     "f": 204,
+     "e": 217
+    },
+    {
+     "text": "native",
+     "f": 217,
+     "e": 231
+    },
+    {
+     "text": "wgpu",
+     "f": 231,
+     "e": 244
+    },
+    {
+     "text": "springs.",
+     "f": 244,
+     "e": 258
+    }
+   ]
+  },
+  {
+   "id": "S03Benchmark",
+   "from": 389,
+   "durationInFrames": 251,
+   "words": [
+    {
+     "text": "Zero",
+     "f": 2,
+     "e": 15
+    },
+    {
+     "text": "Chromium,",
+     "f": 15,
+     "e": 28
+    },
+    {
+     "text": "zero",
+     "f": 28,
+     "e": 41
+    },
+    {
+     "text": "Node.js.",
+     "f": 41,
+     "e": 53
+    },
+    {
+     "text": "It",
+     "f": 53,
+     "e": 66
+    },
+    {
+     "text": "cuts",
+     "f": 66,
+     "e": 79
+    },
+    {
+     "text": "idle",
+     "f": 79,
+     "e": 92
+    },
+    {
+     "text": "memory",
+     "f": 92,
+     "e": 105
+    },
+    {
+     "text": "from",
+     "f": 105,
+     "e": 118
+    },
+    {
+     "text": "five",
+     "f": 118,
+     "e": 130
+    },
+    {
+     "text": "hundred",
+     "f": 130,
+     "e": 143
+    },
+    {
+     "text": "megs",
+     "f": 143,
+     "e": 156
+    },
+    {
+     "text": "down",
+     "f": 156,
+     "e": 169
+    },
+    {
+     "text": "to",
+     "f": 169,
+     "e": 182
+    },
+    {
+     "text": "eighteen,",
+     "f": 182,
+     "e": 195
+    },
+    {
+     "text": "inside",
+     "f": 195,
+     "e": 207
+    },
+    {
+     "text": "a",
+     "f": 207,
+     "e": 220
+    },
+    {
+     "text": "tiny",
+     "f": 220,
+     "e": 233
+    },
+    {
+     "text": "binary.",
+     "f": 233,
+     "e": 246
+    }
+   ]
+  },
+  {
+   "id": "S04OpenRouter",
+   "from": 640,
+   "durationInFrames": 214,
+   "words": [
+    {
+     "text": "And",
+     "f": 2,
+     "e": 13
+    },
+    {
+     "text": "the",
+     "f": 13,
+     "e": 24
+    },
+    {
+     "text": "OpenRouter",
+     "f": 24,
+     "e": 35
+    },
+    {
+     "text": "team",
+     "f": 35,
+     "e": 46
+    },
+    {
+     "text": "just",
+     "f": 46,
+     "e": 57
+    },
+    {
+     "text": "shipped",
+     "f": 57,
+     "e": 67
+    },
+    {
+     "text": "Ori,",
+     "f": 67,
+     "e": 78
+    },
+    {
+     "text": "letting",
+     "f": 78,
+     "e": 89
+    },
+    {
+     "text": "agents",
+     "f": 89,
+     "e": 100
+    },
+    {
+     "text": "run",
+     "f": 100,
+     "e": 111
+    },
+    {
+     "text": "any",
+     "f": 111,
+     "e": 122
+    },
+    {
+     "text": "model",
+     "f": 122,
+     "e": 133
+    },
+    {
+     "text": "straight",
+     "f": 133,
+     "e": 143
+    },
+    {
+     "text": "into",
+     "f": 143,
+     "e": 154
+    },
+    {
+     "text": "lightweight",
+     "f": 154,
+     "e": 165
+    },
+    {
+     "text": "desktop",
+     "f": 165,
+     "e": 176
+    },
+    {
+     "text": "and",
+     "f": 176,
+     "e": 187
+    },
+    {
+     "text": "terminal",
+     "f": 187,
+     "e": 198
+    },
+    {
+     "text": "harnesses.",
+     "f": 198,
+     "e": 209
+    }
+   ]
+  },
+  {
+   "id": "S05Headless",
+   "from": 854,
+   "durationInFrames": 194,
+   "words": [
+    {
+     "text": "Even",
+     "f": 2,
+     "e": 11
+    },
+    {
+     "text": "better,",
+     "f": 11,
+     "e": 21
+    },
+    {
+     "text": "Rune",
+     "f": 21,
+     "e": 30
+    },
+    {
+     "text": "runs",
+     "f": 30,
+     "e": 39
+    },
+    {
+     "text": "headless",
+     "f": 39,
+     "e": 49
+    },
+    {
+     "text": "out",
+     "f": 49,
+     "e": 58
+    },
+    {
+     "text": "of",
+     "f": 58,
+     "e": 67
+    },
+    {
+     "text": "the",
+     "f": 67,
+     "e": 77
+    },
+    {
+     "text": "box",
+     "f": 77,
+     "e": 86
+    },
+    {
+     "text": "so",
+     "f": 86,
+     "e": 95
+    },
+    {
+     "text": "AI",
+     "f": 95,
+     "e": 105
+    },
+    {
+     "text": "agents",
+     "f": 105,
+     "e": 114
+    },
+    {
+     "text": "can",
+     "f": 114,
+     "e": 123
+    },
+    {
+     "text": "drive",
+     "f": 123,
+     "e": 133
+    },
+    {
+     "text": "and",
+     "f": 133,
+     "e": 142
+    },
+    {
+     "text": "inspect",
+     "f": 142,
+     "e": 151
+    },
+    {
+     "text": "UI",
+     "f": 151,
+     "e": 161
+    },
+    {
+     "text": "directly",
+     "f": 161,
+     "e": 170
+    },
+    {
+     "text": "in",
+     "f": 170,
+     "e": 179
+    },
+    {
+     "text": "memory.",
+     "f": 179,
+     "e": 189
+    }
+   ]
+  },
+  {
+   "id": "S06CtaPin",
+   "from": 1048,
+   "durationInFrames": 220,
+   "words": [
+    {
+     "text": "Comment",
+     "f": 2,
+     "e": 11
+    },
+    {
+     "text": "RUNE",
+     "f": 11,
+     "e": 20
+    },
+    {
+     "text": "below",
+     "f": 20,
+     "e": 29
+    },
+    {
+     "text": "to",
+     "f": 29,
+     "e": 38
+    },
+    {
+     "text": "get",
+     "f": 38,
+     "e": 47
+    },
+    {
+     "text": "the",
+     "f": 47,
+     "e": 56
+    },
+    {
+     "text": "full",
+     "f": 56,
+     "e": 65
+    },
+    {
+     "text": "open",
+     "f": 65,
+     "e": 74
+    },
+    {
+     "text": "source",
+     "f": 74,
+     "e": 83
+    },
+    {
+     "text": "toolkit,",
+     "f": 83,
+     "e": 92
+    },
+    {
+     "text": "and",
+     "f": 92,
+     "e": 100
+    },
+    {
+     "text": "check",
+     "f": 100,
+     "e": 109
+    },
+    {
+     "text": "the",
+     "f": 109,
+     "e": 118
+    },
+    {
+     "text": "pinned",
+     "f": 118,
+     "e": 127
+    },
+    {
+     "text": "comment",
+     "f": 127,
+     "e": 136
+    },
+    {
+     "text": "for",
+     "f": 136,
+     "e": 145
+    },
+    {
+     "text": "details!",
+     "f": 145,
+     "e": 154
+    }
+   ]
+  }
+ ],
+ "hook": {
+  "lines": [
+   [
+    "TIRED OF"
+   ],
+   [
+    "ELECTRON?"
+   ]
+  ],
+  "hot": [
+   "ELECTRON?"
+  ],
+  "top": 140,
+  "size": 86,
+  "outAt": 75
+ }
+}

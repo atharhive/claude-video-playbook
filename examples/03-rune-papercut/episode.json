@@ -1,0 +1,44 @@
+{
+  "comp": "RunePapercutExplainer",
+  "out": "rune-papercut-explainer",
+  "narration": "./narration",
+  "timing": "timing_narrator.js",
+  "fps": 30,
+  "start": 0.2,
+  "gap": 0.25,
+  "hold": 2.2,
+  "whipScene": "S04OpenRouter",
+  "hook": {
+    "lines": [
+      ["TIRED OF"],
+      ["ELECTRON?"]
+    ],
+    "hot": ["ELECTRON?"],
+    "top": 140,
+    "size": 86,
+    "hold": 2.5
+  },
+  "scenes": [
+    ["S01AnxiousHook", "l1_hook", 0],
+    ["S02RuneIntro", "l2_rune", 0],
+    ["S03Benchmark", "l3_benchmark", 0],
+    ["S04OpenRouter", "l4_openrouter", 0],
+    ["S05Headless", "l5_headless", 0],
+    ["S06CtaPin", "l6_cta", 0]
+  ],
+  "banners": {
+    "S01AnxiousHook": "ELECTRON MEMORY CRISIS",
+    "S02RuneIntro": "RUNE GPU ARCHITECTURE",
+    "S03Benchmark": "-95% IDLE RAM BENCHMARK",
+    "S04OpenRouter": "OPENROUTER ORI JUST SHIPPED",
+    "S05Headless": "HEADLESS AGENT UI TESTER",
+    "S06CtaPin": "COMMENT RUNE • CHECK PINNED COMMENT"
+  },
+  "cuts": {
+    "S02RuneIntro": {"kind": "tapePull", "label": "CLAUDE REVEAL"},
+    "S03Benchmark": {"kind": "tearAway"},
+    "S04OpenRouter": {"kind": "whip"},
+    "S05Headless": {"kind": "zoomThrough", "x": 540, "y": 960},
+    "S06CtaPin": {"kind": "stampCut"}
+  }
+}
