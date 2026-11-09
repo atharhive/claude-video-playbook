@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  body { background: #0f111a; color: #fff; width: 1200px; height: 760px; padding: 36px 44px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; }
+  .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #23293d; padding-bottom: 16px; }
+  .title { font-size: 28px; font-weight: 800; display: flex; align-items: center; gap: 12px; }
+  .source { font-family: ui-monospace, Menlo, monospace; font-size: 14px; color: #94a3b8; }
+  .quote-box { background: #181d2e; border-left: 4px solid #ef4444; padding: 16px 20px; border-radius: 0 8px 8px 0; font-size: 17px; color: #e2e8f0; line-height: 1.5; margin: 16px 0; }
+  .quote-box b { color: #f87171; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 12px 0; }
+  .node { background: #161b2c; border: 1px solid #28334d; border-radius: 10px; padding: 18px; position: relative; display: flex; flex-direction: column; justify-content: space-between; height: 130px; }
+  .node.killed { border-color: rgba(239, 68, 68, 0.6); background: rgba(239, 68, 68, 0.08); }
+  .node-name { font-family: ui-monospace, Menlo, monospace; font-size: 15px; font-weight: 700; color: #cbd5e1; }
+  .node-ip { font-family: ui-monospace, Menlo, monospace; font-size: 12px; color: #64748b; }
+  .status-pill { font-size: 11px; font-weight: 700; padding: 4px 8px; border-radius: 4px; width: fit-content; text-transform: uppercase; }
+  .status-alive { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
+  .status-dead { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+  .cross-overlay { position: absolute; right: 14px; top: 14px; font-size: 24px; color: #ef4444; font-weight: 900; }
+  .footer { display: flex; justify-content: space-between; align-items: center; background: #131724; border: 1px solid #23293d; border-radius: 10px; padding: 16px 24px; }
+  .live-dot { width: 10px; height: 10px; border-radius: 5px; background: #22c55e; display: inline-block; margin-right: 8px; box-shadow: 0 0 10px #22c55e; }
+  .stamp { border: 3px solid #ef4444; color: #ef4444; font-weight: 900; font-size: 20px; padding: 4px 14px; border-radius: 6px; letter-spacing: 0.1em; transform: rotate(-5deg); text-transform: uppercase; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">
+      <span>🐒 Netflix Chaos Monkey</span>
+      <span class="stamp">ON PURPOSE</span>
+    </div>
+    <div class="source">netflixtechblog.com · The Netflix Simian Army</div>
+  </div>
+
+  <div class="quote-box">
+    <b>Chaos Monkey Definition:</b> "A tool that randomly terminates production instances and services during peak hours to ensure our engineering teams build automated failover and zero-downtime resilience."
+  </div>
+
+  <div class="grid">
+    <div class="node">
+      <div class="node-name">web-gateway-01</div>
+      <div class="node-ip">10.0.12.44</div>
+      <div class="status-pill status-alive">● Operational</div>
+    </div>
+    <div class="node killed">
+      <div class="cross-overlay">✕ KILLED</div>
+      <div class="node-name">video-stream-02</div>
+      <div class="node-ip">10.0.14.89</div>
+      <div class="status-pill status-dead">Terminated</div>
+    </div>
+    <div class="node">
+      <div class="node-name">user-auth-01</div>
+      <div class="node-ip">10.0.16.12</div>
+      <div class="status-pill status-alive">● Operational</div>
+    </div>
+    <div class="node killed">
+      <div class="cross-overlay">✕ KILLED</div>
+      <div class="node-name">recommend-api-04</div>
+      <div class="node-ip">10.0.18.91</div>
+      <div class="status-pill status-dead">Terminated</div>
+    </div>
+    <div class="node">
+      <div class="node-name">payment-edge-01</div>
+      <div class="node-ip">10.0.20.15</div>
+      <div class="status-pill status-alive">● Operational</div>
+    </div>
+    <div class="node">
+      <div class="node-name">metadata-db-01</div>
+      <div class="node-ip">10.0.22.80</div>
+      <div class="status-pill status-alive">● Operational</div>
+    </div>
+    <div class="node killed">
+      <div class="cross-overlay">✕ KILLED</div>
+      <div class="node-name">search-cluster-03</div>
+      <div class="node-ip">10.0.24.11</div>
+      <div class="status-pill status-dead">Terminated</div>
+    </div>
+    <div class="node">
+      <div class="node-name">cdn-cache-01</div>
+      <div class="node-ip">10.0.26.77</div>
+      <div class="status-pill status-alive">● Operational</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div style="font-size:16px; font-weight:600; color:#e2e8f0;">
+      <span class="live-dot"></span>Active Users Watching: 2,450,120
+    </div>
+    <div style="font-size:16px; font-weight:700; color:#4ade80;">
+      ✓ Automated Failover Succeeded · Zero Dropped Streams
+    </div>
+  </div>
+</body>
+</html>

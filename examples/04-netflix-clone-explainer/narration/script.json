@@ -1,0 +1,32 @@
+[
+  {
+    "id": "l1_hook",
+    "speaker": "duo",
+    "text": "Hey Claude, I just finished my portfolio app. It is a full Netflix clone with auth and dark mode, so I am ready to apply. Your Netflix clone will not get you into Netflix. Netflix already has a Netflix."
+  },
+  {
+    "id": "l2_blogs",
+    "speaker": "claude",
+    "text": "Big tech companies write down their real engineering problems in public on their own tech blogs. Netflix, Uber, and Meta explain the exact architecture challenges they face every single week."
+  },
+  {
+    "id": "l3_chaos",
+    "speaker": "claude",
+    "text": "For example, Netflix built Chaos Monkey to randomly kill their own production servers on purpose, just to prove the streaming pipeline survives."
+  },
+  {
+    "id": "l4_tiny",
+    "speaker": "claude",
+    "text": "Instead of copying their UI, build a tiny version of that tool. Write a thirty-line script that kills a service in your app, and see what breaks first."
+  },
+  {
+    "id": "l5_reachout",
+    "speaker": "claude",
+    "text": "Put it on GitHub, link the original blog post in your README, and send a one-sentence message to the engineer who wrote it. Engineers love people who actually build solutions."
+  },
+  {
+    "id": "l6_cta",
+    "speaker": "claude",
+    "text": "Comment INSIDER below to get the four best tech blogs, the Claude Code prompt, the README template, and the exact outreach script."
+  }
+]

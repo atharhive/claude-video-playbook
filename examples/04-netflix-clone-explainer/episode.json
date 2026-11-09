@@ -1,0 +1,44 @@
+{
+  "comp": "NetflixCloneExplainer",
+  "out": "netflix-clone-explainer",
+  "narration": "./narration",
+  "timing": "timing_narrator.js",
+  "fps": 30,
+  "start": 0.2,
+  "gap": 0.25,
+  "hold": 2.2,
+  "whipScene": "S04BuildTiny",
+  "hook": {
+    "lines": [
+      ["YOUR NETFLIX"],
+      ["CLONE?"]
+    ],
+    "hot": ["CLONE?"],
+    "top": 140,
+    "size": 86,
+    "hold": 2.5
+  },
+  "scenes": [
+    ["S01CloneHook", "l1_hook", 0],
+    ["S02TechBlogs", "l2_blogs", 0],
+    ["S03ChaosMonkey", "l3_chaos", 0],
+    ["S04BuildTiny", "l4_tiny", 0],
+    ["S05ReachOut", "l5_reachout", 0],
+    ["S06CtaInsider", "l6_cta", 0]
+  ],
+  "banners": {
+    "S01CloneHook": "THE PORTFOLIO CLONE TRAP",
+    "S02TechBlogs": "READ REAL TECH BLOGS",
+    "S03ChaosMonkey": "NETFLIX CHAOS MONKEY",
+    "S04BuildTiny": "BUILD THE TINY VERSION",
+    "S05ReachOut": "MESSAGE THE ENGINEER",
+    "S06CtaInsider": "COMMENT INSIDER • CHECK PINNED COMMENT"
+  },
+  "cuts": {
+    "S02TechBlogs": {"kind": "tapePull", "label": "CLAUDE ADVICE"},
+    "S03ChaosMonkey": {"kind": "tearAway"},
+    "S04BuildTiny": {"kind": "whip"},
+    "S05ReachOut": {"kind": "zoomThrough", "x": 540, "y": 960},
+    "S06CtaInsider": {"kind": "stampCut"}
+  }
+}

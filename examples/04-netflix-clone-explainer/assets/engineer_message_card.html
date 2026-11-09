@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  body { background: #0c0f17; color: #fff; width: 1200px; height: 760px; padding: 36px 44px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; }
+  .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1f293d; padding-bottom: 16px; }
+  .step-tag { background: #3b82f6; color: #fff; font-weight: 800; font-size: 13px; padding: 4px 12px; border-radius: 20px; }
+  .title { font-size: 26px; font-weight: 800; display: flex; align-items: center; gap: 12px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 16px 0; }
+  .card-box { background: #131926; border: 1px solid #232f45; border-radius: 12px; padding: 24px; }
+  .card-header { font-size: 17px; font-weight: 700; color: #94a3b8; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; }
+  .repo-banner { background: #0b0f19; border: 1px solid #28354f; border-radius: 8px; padding: 18px; margin-bottom: 16px; }
+  .repo-name { font-size: 18px; font-weight: 700; color: #58a6ff; font-family: ui-monospace, Menlo, monospace; }
+  .repo-desc { font-size: 14px; color: #cbd5e1; margin-top: 6px; line-height: 1.5; }
+  .readme-callout { background: rgba(245, 158, 11, 0.1); border-left: 3px solid #f59e0b; padding: 12px 14px; border-radius: 0 6px 6px 0; font-size: 13px; color: #fde68a; margin-top: 14px; }
+  .chat-thread { display: flex; flex-direction: column; gap: 14px; }
+  .bubble-sent { background: #0284c7; color: #fff; padding: 14px 18px; border-radius: 16px 16px 4px 16px; font-size: 15px; line-height: 1.5; align-self: flex-end; max-width: 85%; }
+  .bubble-recv { background: #1e293b; color: #e2e8f0; border: 1px solid #334155; padding: 14px 18px; border-radius: 16px 16px 16px 4px; font-size: 15px; line-height: 1.5; align-self: flex-start; max-width: 85%; }
+  .status-tag { font-size: 11px; color: #94a3b8; margin-top: 4px; text-align: right; }
+  .footer-tip { background: rgba(16, 185, 129, 0.15); border: 1px solid #10b981; border-radius: 8px; padding: 12px 20px; font-size: 15px; color: #6ee7b7; font-weight: 600; text-align: center; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">
+      <span class="step-tag">STEP 4/4</span>
+      <span>Send One Message To The Engineer</span>
+    </div>
+    <div style="font-size:15px; color:#94a3b8;">Authors' names are on every engineering blog.</div>
+  </div>
+
+  <div class="grid">
+    <div class="card-box">
+      <div class="card-header">
+        <span>GitHub Repository</span>
+        <span style="font-size:12px; color:#10b981;">Public · Linked ✓</span>
+      </div>
+      <div class="repo-banner">
+        <div class="repo-name">athar / mini-chaos-monkey</div>
+        <div class="repo-desc">30-line resilience harness that injects random failure into microservices to test fallback cache.</div>
+        <div class="readme-callout">
+          <b>README:</b> "Inspired by Netflix TechBlog post: 'The Netflix Simian Army'. Testing failure boundaries on small apps."
+        </div>
+      </div>
+      <div style="font-size:13px; color:#94a3b8; line-height:1.6;">
+        Every engineer who wrote the blog post is proud of their research. Seeing a student build a mini version of their tool stands out from 10,000 resume PDFs.
+      </div>
+    </div>
+
+    <div class="card-box">
+      <div class="card-header">
+        <span>LinkedIn Direct Message</span>
+        <span style="font-size:12px; color:#38bdf8;">1-Sentence Pitch</span>
+      </div>
+      <div class="chat-thread">
+        <div class="bubble-sent">
+          "Hey! I read your post on Netflix TechBlog about Chaos Monkey. I built a 30-line version for my app, and it actually discovered a critical single point of failure in our catalog. Here is the code: github.com/athar/mini-chaos-monkey"
+          <div class="status-tag">Delivered · 14:02 ✓</div>
+        </div>
+        <div class="bubble-recv">
+          "This is awesome! Most applicants just send a generic clone. What failed first when you killed the payments service?"
+          <div style="font-size:11px; color:#64748b; margin-top:4px;">Principal Engineer @ Netflix · 14:15</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-tip">
+    ⚡ Result: You are no longer "just another junior with a clone" — you are an engineer discussing real systems.
+  </div>
+</body>
+</html>
