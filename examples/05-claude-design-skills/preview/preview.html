@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dark Tech Keynote Preview</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #060709; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif; }
+    canvas { display: block; width: 1080px; height: 1920px; }
+  </style>
+</head>
+<body>
+  <canvas id="stage" width="1080" height="1920"></canvas>
+
+  <script>
+    const canvas = document.getElementById('stage');
+    const ctx = canvas.getContext('2d');
+    const W = 1080, H = 1920;
+
+    window.renderFrame = function(frameIndex) {
+      const t = frameIndex / 24.0;
+      ctx.clearRect(0, 0, W, H);
+
+      // 1. Dark Tech Keynote Stage: Obsidian Base + Radial Spotlight
+      const bgGrad = ctx.createRadialGradient(W / 2, 450, 40, W / 2, 600, 1000);
+      bgGrad.addColorStop(0, '#121622');
+      bgGrad.addColorStop(0.4, '#0a0d14');
+      bgGrad.addColorStop(1, '#050608');
+      ctx.fillStyle = bgGrad;
+      ctx.fillRect(0, 0, W, H);
+
+      // Precision Hairline Grid (48px module, 4th line accent)
+      const gridOffset = (t * 8) % 48;
+      for (let x = 0; x <= W; x += 48) {
+        const isMajor = (x % 192 === 0);
+        ctx.strokeStyle = isMajor ? 'rgba(255, 255, 255, 0.06)' : 'rgba(255, 255, 255, 0.02)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, H);
+        ctx.stroke();
+      }
+      for (let y = 0; y <= H; y += 48) {
+        const isMajor = (y % 192 === 0);
+        ctx.strokeStyle = isMajor ? 'rgba(255, 255, 255, 0.06)' : 'rgba(255, 255, 255, 0.02)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(0, y + gridOffset);
+        ctx.lineTo(W, y + gridOffset);
+        ctx.stroke();
+      }
+
+      // 2. Top Header Navigation Tag (Pill)
+      ctx.save();
+      const topPop = Math.min(t * 4, 1);
+      ctx.translate(W / 2, 220);
+      ctx.scale(topPop, topPop);
+
+      // Outer Glow
+      ctx.shadowColor = 'rgba(56, 189, 248, 0.35)';
+      ctx.shadowBlur = 20;
+
+      // Dark Glass Pill
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.8)';
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.4)';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.roundRect(-240, -28, 480, 56, 28);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.shadowBlur = 0;
+      ctx.font = '700 18px ui-monospace, "SF Mono", Menlo, monospace';
+      ctx.fillStyle = '#38BDF8';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.letterSpacing = '0.08em';
+      ctx.fillText(' APPLE DESIGN SYSTEM · CLAUDE SKILLS', 0, 0);
+      ctx.restore();
+
+      // 3. Central Hero Glass Card (The Apple / Claude / Figma Workflow)
+      const cardY = 360 + Math.max(0, (1 - Math.min(t * 3.5, 1)) * 120);
+      const cardAlpha = Math.min(t * 4, 1);
+
+      ctx.save();
+      ctx.globalAlpha = cardAlpha;
+      ctx.translate(W / 2 - 460, cardY);
+
+      // Glass Drop Shadow
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.8)';
+      ctx.shadowBlur = 48;
+      ctx.shadowOffsetY = 24;
+
+      // Dark Glass Surface (3-step raised)
+      ctx.fillStyle = 'rgba(18, 22, 34, 0.9)';
+      ctx.beginPath();
+      ctx.roundRect(0, 0, 920, 520, 24);
+      ctx.fill();
+
+      // 1px Border Highlight + Inner Top Highlight
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      // Top Glass Specular Line
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.25)';
+      ctx.beginPath();
+      ctx.moveTo(24, 1);
+      ctx.lineTo(896, 1);
+      ctx.stroke();
+
+      ctx.shadowBlur = 0;
+
+      // Workflow Icons Row inside Hero Card
+      // Apple Logo -> Arrow -> Claude Logo -> Arrow -> Figma Logo
+      const iconY = 160;
+
+      // Apple Icon Circle
+      ctx.fillStyle = '#0F121C';
+      ctx.strokeStyle = '#273147';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.roundRect(140, iconY - 60, 120, 120, 24);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.font = '60px -apple-system, sans-serif';
+      ctx.fillStyle = '#FFFFFF';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('', 200, iconY);
+
+      // Arrow 1
+      ctx.font = '700 28px -apple-system, sans-serif';
+      ctx.fillStyle = '#64748B';
+      ctx.fillText('→', 315, iconY);
+
+      // Claude Icon Circle (Anthropic Terracotta)
+      ctx.fillStyle = 'rgba(217, 119, 87, 0.12)';
+      ctx.strokeStyle = '#D97757';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.roundRect(370, iconY - 60, 120, 120, 24);
+      ctx.fill();
+      ctx.stroke();
+
+      // Golden Spark on Claude
+      ctx.font = '54px -apple-system, sans-serif';
+      ctx.fillStyle = '#D97757';
+      ctx.fillText('✻', 430, iconY);
+
+      // Arrow 2
+      ctx.font = '700 28px -apple-system, sans-serif';
+      ctx.fillStyle = '#64748B';
+      ctx.fillText('→', 545, iconY);
+
+      // Figma / Design System Icon Circle
+      ctx.fillStyle = '#0F121C';
+      ctx.strokeStyle = '#273147';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.roundRect(600, iconY - 60, 120, 120, 24);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.font = '700 48px -apple-system, sans-serif';
+      ctx.fillStyle = '#A855F7';
+      ctx.fillText('❖', 660, iconY);
+
+      // Giant Typography: "4 DESIGN SKILLS"
+      ctx.font = '900 58px -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif';
+      ctx.fillStyle = '#FFFFFF';
+      ctx.textAlign = 'center';
+      ctx.fillText('4 CLAUDE DESIGN SKILLS', 460, 340);
+
+      ctx.font = '500 24px -apple-system, BlinkMacSystemFont, sans-serif';
+      ctx.fillStyle = '#94A3B8';
+      ctx.fillText('Elevate your AI code from generic tutorial to Apple-level finish', 460, 395);
+
+      // Shimmering light sweep across the card
+      const sweepX = (t * 500) % 1400 - 200;
+      const sweepGrad = ctx.createLinearGradient(sweepX, 0, sweepX + 180, 520);
+      sweepGrad.addColorStop(0, 'rgba(255, 255, 255, 0)');
+      sweepGrad.addColorStop(0.5, 'rgba(255, 255, 255, 0.06)');
+      sweepGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+      ctx.fillStyle = sweepGrad;
+      ctx.beginPath();
+      ctx.roundRect(0, 0, 920, 520, 24);
+      ctx.fill();
+
+      ctx.restore(); // End Hero Card
+
+      // 4. Four Precision Glass Feature Tiles (Snap-Grid Precision)
+      const skills = [
+        { num: '01', title: 'Apple Look', desc: 'Apple Human Interface Guidelines audit', tag: 'HIG GUIDELINES', col: '#38BDF8' },
+        { num: '02', title: 'Better Interface', desc: 'Typography, spacing, contrast & accessibility', tag: 'UI POLISH', col: '#10B981' },
+        { num: '03', title: 'Apple Design', desc: 'Fluid spring physics & natural interactions', tag: 'SPRING MOTION', col: '#F59E0B' },
+        { num: '04', title: 'Superfuture Review', desc: 'Senior-level design critique & prioritized fixes', tag: 'DESIGN AUDIT', col: '#A855F7' }
+      ];
+
+      const startTileY = 930;
+      skills.forEach((s, idx) => {
+        const tileDelay = 0.5 + idx * 0.18;
+        if (t >= tileDelay) {
+          const tileProgress = Math.min((t - tileDelay) * 4, 1);
+          const ty = startTileY + idx * 125 + (1 - tileProgress) * 40;
+
+          ctx.save();
+          ctx.globalAlpha = tileProgress;
+          ctx.translate(W / 2 - 460, ty);
+
+          // Glass Tile Surface
+          ctx.fillStyle = 'rgba(15, 19, 29, 0.85)';
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.roundRect(0, 0, 920, 105, 16);
+          ctx.fill();
+          ctx.stroke();
+
+          // Left Index Number
+          ctx.font = '800 24px ui-monospace, monospace';
+          ctx.fillStyle = s.col;
+          ctx.textAlign = 'left';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(s.num, 32, 52);
+
+          // Title
+          ctx.font = '700 26px -apple-system, sans-serif';
+          ctx.fillStyle = '#FFFFFF';
+          ctx.fillText(s.title, 95, 42);
+
+          // Subtitle
+          ctx.font = '500 18px -apple-system, sans-serif';
+          ctx.fillStyle = '#94A3B8';
+          ctx.fillText(s.desc, 95, 72);
+
+          // Right Tag Pill
+          ctx.fillStyle = 'rgba(255, 255, 255, 0.06)';
+          ctx.strokeStyle = s.col;
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.roundRect(700, 32, 185, 40, 20);
+          ctx.fill();
+          ctx.stroke();
+
+          ctx.font = '700 13px ui-monospace, monospace';
+          ctx.fillStyle = s.col;
+          ctx.textAlign = 'center';
+          ctx.fillText(s.tag, 792, 52);
+
+          ctx.restore();
+        }
+      });
+
+      // 5. Toast Subtitle Card (Bottom UI Toast)
+      ctx.save();
+      ctx.translate(W / 2, 1580);
+
+      // Toast Box Shadow
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.7)';
+      ctx.shadowBlur = 32;
+
+      // Dark Translucent Glass Pill
+      ctx.fillStyle = 'rgba(15, 20, 30, 0.95)';
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.roundRect(-420, -60, 840, 120, 24);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.shadowBlur = 0;
+
+      // Active Speaker Green Dot
+      const pulseDot = Math.sin(t * 8) * 2 + 6;
+      ctx.fillStyle = '#22C55E';
+      ctx.shadowColor = '#22C55E';
+      ctx.shadowBlur = 12;
+      ctx.beginPath();
+      ctx.arc(-370, 0, pulseDot, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.shadowBlur = 0;
+
+      // Subtitle Lines
+      ctx.font = '700 28px -apple-system, BlinkMacSystemFont, "Inter", sans-serif';
+      ctx.fillStyle = '#FFFFFF';
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('"Your Claude websites look clean at first...', -340, -16);
+      ctx.fillStyle = '#38BDF8';
+      ctx.fillText('but why do they lack that premium Apple finish?"', -340, 20);
+
+      ctx.restore();
+
+      // 6. Footer Signature
+      ctx.save();
+      ctx.font = '600 17px ui-monospace, monospace';
+      ctx.fillStyle = '#475569';
+      ctx.textAlign = 'center';
+      ctx.fillText('DARK TECH KEYNOTE · APPLE UI REVEAL', W / 2, 1860);
+      ctx.restore();
+    };
+
+    window.renderFrame(30);
+  </script>
+</body>
+</html>

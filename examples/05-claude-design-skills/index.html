@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dark Tech Keynote Master</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #060709; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif; }
+    canvas { display: block; width: 1080px; height: 1920px; }
+  </style>
+</head>
+<body>
+  <canvas id="stage" width="1080" height="1920"></canvas>
+
+  <script>
+    const canvas = document.getElementById('stage');
+    const ctx = canvas.getContext('2d');
+    const W = 1080, H = 1920;
+
+    // Timeline cues in seconds
+    const T = {
+      l1: [0.2, 5.77],
+      l2: [5.97, 13.40],
+      l3: [13.65, 25.54],
+      l4: [25.79, 35.68],
+      l5: [35.93, 45.40],
+      l6: [45.65, 53.92],
+      l7: [54.17, 61.41]
+    };
+
+    // Helper: Draw Glass Container
+    function drawGlassCard(x, y, w, h, r = 24, bg = 'rgba(16, 20, 32, 0.94)', border = 'rgba(255, 255, 255, 0.12)') {
+      ctx.save();
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.75)';
+      ctx.shadowBlur = 36;
+      ctx.shadowOffsetY = 18;
+
+      ctx.fillStyle = bg;
+      ctx.beginPath();
+      ctx.roundRect(x, y, w, h, r);
+      ctx.fill();
+
+      ctx.strokeStyle = border;
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      // Specular Top Highlight
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.22)';
+      ctx.beginPath();
+      ctx.moveTo(x + r, y + 1);
+      ctx.lineTo(x + w - r, y + 1);
+      ctx.stroke();
+
+      ctx.restore();
+    }
+
+    // Main Renderer
+    window.renderFrame = function(frameIndex) {
+      const t = frameIndex / 24.0;
+      ctx.clearRect(0, 0, W, H);
+
+      // 1. Dark Tech Keynote Backdrop: Obsidian Base + Radial Spotlight
+      const bgGrad = ctx.createRadialGradient(W / 2, 450, 40, W / 2, 600, 1000);
+      bgGrad.addColorStop(0, '#121624');
+      bgGrad.addColorStop(0.4, '#0a0d14');
+      bgGrad.addColorStop(1, '#050608');
+      ctx.fillStyle = bgGrad;
+      ctx.fillRect(0, 0, W, H);
+
+      // Precision Hairline Grid (48px module, 4th line accent)
+      const gridOffset = (t * 8) % 48;
+      for (let x = 0; x <= W; x += 48) {
+        const isMajor = (x % 192 === 0);
+        ctx.strokeStyle = isMajor ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.018)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+      }
+      for (let y = 0; y <= H; y += 48) {
+        const isMajor = (y % 192 === 0);
+        ctx.strokeStyle = isMajor ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.018)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(0, y + gridOffset); ctx.lineTo(W, y + gridOffset); ctx.stroke();
+      }
+
+      // 2. Top Header Navigation Tag (Pill)
+      ctx.save();
+      ctx.translate(W / 2, 200);
+
+      ctx.shadowColor = 'rgba(56, 189, 248, 0.35)';
+      ctx.shadowBlur = 18;
+
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.85)';
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.4)';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.roundRect(-260, -28, 520, 56, 28);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.shadowBlur = 0;
+      ctx.shadowColor = 'transparent';
+      ctx.font = '700 18px ui-monospace, "SF Mono", Menlo, monospace';
+      ctx.fillStyle = '#38BDF8';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+
+      if (t < T.l2[0]) {
+        ctx.fillText(' APPLE DESIGN SYSTEM · CLAUDE SKILLS', 0, 0);
+      } else if (t < T.l3[0]) {
+        ctx.fillText('WHY AI SITES LOOK GENERIC · BOILERPLATE', 0, 0);
+      } else if (t < T.l4[0]) {
+        ctx.fillText('SKILL 01 · APPLE LOOK · HIG AUDIT', 0, 0);
+      } else if (t < T.l5[0]) {
+        ctx.fillText('SKILL 02 · BETTER INTERFACE · UI POLISH', 0, 0);
+      } else if (t < T.l6[0]) {
+        ctx.fillText('SKILL 03 · APPLE DESIGN · SPRING PHYSICS', 0, 0);
+      } else if (t < T.l7[0]) {
+        ctx.fillText('SKILL 04 · SUPERFUTURE DESIGN REVIEW', 0, 0);
+      } else {
+        ctx.fillText('GET THE 4 CLAUDE DESIGN SKILLS', 0, 0);
+      }
+      ctx.restore();
+
+      // 3. Central Stage (Visual Cards by Scene)
+      const stageX = W / 2 - 460;
+      const stageY = 320;
+
+      // Ensure no lingering shadows
+      ctx.shadowBlur = 0;
+      ctx.shadowColor = 'transparent';
+
+      if (t < T.l2[0]) {
+        // --- SCENE 1: THE HOOK ---
+        drawGlassCard(stageX, stageY, 920, 480);
+
+        // Apple -> Claude -> Figma icons
+        const iconY = stageY + 140;
+        ctx.fillStyle = '#0F121C'; ctx.strokeStyle = '#273147'; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.roundRect(stageX + 140, iconY - 55, 110, 110, 22); ctx.fill(); ctx.stroke();
+        ctx.font = '54px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        ctx.fillText('', stageX + 195, iconY);
+
+        ctx.font = '700 28px -apple-system, sans-serif'; ctx.fillStyle = '#64748B';
+        ctx.fillText('→', stageX + 310, iconY);
+
+        ctx.fillStyle = 'rgba(217, 119, 87, 0.15)'; ctx.strokeStyle = '#D97757'; ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.roundRect(stageX + 365, iconY - 55, 110, 110, 22); ctx.fill(); ctx.stroke();
+        ctx.font = '50px -apple-system, sans-serif'; ctx.fillStyle = '#D97757';
+        ctx.fillText('✻', stageX + 420, iconY);
+
+        ctx.font = '700 28px -apple-system, sans-serif'; ctx.fillStyle = '#64748B';
+        ctx.fillText('→', stageX + 535, iconY);
+
+        ctx.fillStyle = '#0F121C'; ctx.strokeStyle = '#273147'; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.roundRect(stageX + 590, iconY - 55, 110, 110, 22); ctx.fill(); ctx.stroke();
+        ctx.font = '700 44px -apple-system, sans-serif'; ctx.fillStyle = '#A855F7';
+        ctx.fillText('❖', stageX + 645, iconY);
+
+        ctx.font = '900 56px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF'; ctx.textAlign = 'center';
+        ctx.fillText('4 CLAUDE DESIGN SKILLS', stageX + 460, stageY + 310);
+        ctx.font = '500 23px -apple-system, sans-serif'; ctx.fillStyle = '#94A3B8';
+        ctx.fillText('Transform AI-generated layouts into premium Apple-grade interfaces', stageX + 460, stageY + 365);
+
+        // Problem Stamp
+        ctx.save();
+        ctx.translate(stageX + 460, stageY + 420);
+        ctx.fillStyle = 'rgba(239, 68, 68, 0.15)'; ctx.strokeStyle = '#EF4444'; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.roundRect(-210, -22, 420, 44, 12); ctx.fill(); ctx.stroke();
+        ctx.font = '800 16px ui-monospace, monospace'; ctx.fillStyle = '#F87171'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        ctx.fillText('STOP SHIPPING GENERIC AI WEBSITES', 0, 0);
+        ctx.restore();
+
+        // 4 Skill Preview Chips Below
+        const chips = [
+          { n: '01', t: 'Apple Look', c: '#38BDF8', tag: 'HIG GUIDELINES' },
+          { n: '02', t: 'Better Interface', c: '#10B981', tag: 'UI POLISH' },
+          { n: '03', t: 'Apple Design', c: '#F59E0B', tag: 'SPRING MOTION' },
+          { n: '04', t: 'Superfuture Review', c: '#A855F7', tag: 'DESIGN AUDIT' }
+        ];
+        chips.forEach((s, i) => {
+          const cy = stageY + 515 + i * 115;
+          drawGlassCard(stageX, cy, 920, 95, 16);
+          ctx.font = '800 22px ui-monospace, monospace'; ctx.fillStyle = s.c; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+          ctx.fillText(s.n, stageX + 28, cy + 48);
+          ctx.font = '700 24px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF';
+          ctx.fillText(s.t, stageX + 85, cy + 48);
+          ctx.fillStyle = 'rgba(255, 255, 255, 0.05)'; ctx.strokeStyle = s.c; ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.roundRect(stageX + 710, cy + 28, 180, 38, 19); ctx.fill(); ctx.stroke();
+          ctx.font = '700 12px ui-monospace, monospace'; ctx.fillStyle = s.c; ctx.textAlign = 'center';
+          ctx.fillText(s.tag, stageX + 800, cy + 48);
+        });
+
+      } else if (t < T.l3[0]) {
+        // --- SCENE 2: WHY CLAUDE WEBSITES LOOK GENERIC (Before vs After) ---
+        drawGlassCard(stageX, stageY, 920, 720);
+
+        ctx.font = '900 40px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        ctx.fillText('The Problem: Generic AI Defaults', stageX + 460, stageY + 70);
+
+        // Before Box (Left)
+        const bX = stageX + 40, bY = stageY + 120, bW = 400, bH = 540;
+        ctx.fillStyle = '#0F1218'; ctx.strokeStyle = '#2A1C20'; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.roundRect(bX, bY, bW, bH, 16); ctx.fill(); ctx.stroke();
+
+        ctx.fillStyle = 'rgba(239, 68, 68, 0.15)'; ctx.strokeStyle = '#EF4444'; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.roundRect(bX + 20, bY + 20, 160, 32, 16); ctx.fill(); ctx.stroke();
+        ctx.font = '800 13px ui-monospace, monospace'; ctx.fillStyle = '#F87171'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        ctx.fillText('DEFAULT CLAUDE', bX + 100, bY + 36);
+
+        // Flaws list
+        const flaws = [
+          '✗ Harsh pure black drop shadows',
+          '✗ Random padding & misaligned grids',
+          '✗ Stiff 0.2s linear CSS transitions',
+          '✗ Cluttered buttons with zero hierarchy',
+          '✗ Generic blue #0000FF saturated links',
+          '✗ Poor mobile viewport scaling'
+        ];
+        flaws.forEach((f, i) => {
+          ctx.font = '500 16px -apple-system, sans-serif'; ctx.fillStyle = '#FDA4AF'; ctx.textAlign = 'left';
+          ctx.fillText(f, bX + 24, bY + 100 + i * 50);
+        });
+
+        // After Box (Right)
+        const aX = stageX + 480, aY = stageY + 120, aW = 400, aH = 540;
+        ctx.fillStyle = '#0F1626'; ctx.strokeStyle = 'rgba(56, 189, 248, 0.4)'; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.roundRect(aX, aY, aW, aH, 16); ctx.fill(); ctx.stroke();
+
+        ctx.fillStyle = 'rgba(56, 189, 248, 0.15)'; ctx.strokeStyle = '#38BDF8'; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.roundRect(aX + 20, aY + 20, 160, 32, 16); ctx.fill(); ctx.stroke();
+        ctx.font = '800 13px ui-monospace, monospace'; ctx.fillStyle = '#38BDF8'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        ctx.fillText('WITH 4 SKILLS', aX + 100, aY + 36);
+
+        const perks = [
+          '✓ Apple HIG 8pt optical spacing',
+          '✓ Natural spring dynamics (wgpu / Bevy)',
+          '✓ 3-step dark surface elevation ladder',
+          '✓ SF Pro Display type hierarchy',
+          '✓ WCAG AAA contrast compliance',
+          '✓ Senior-level design critique passes'
+        ];
+        perks.forEach((p, i) => {
+          ctx.font = '600 16px -apple-system, sans-serif'; ctx.fillStyle = '#7DD3FC'; ctx.textAlign = 'left';
+          ctx.fillText(p, aX + 24, aY + 100 + i * 50);
+        });
+
+      } else if (t < T.l4[0]) {
+        // --- SCENE 3: SKILL 01 APPLE LOOK ---
+        drawGlassCard(stageX, stageY, 920, 720);
+
+        ctx.font = '800 16px ui-monospace, monospace'; ctx.fillStyle = '#38BDF8'; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+        ctx.fillText('SKILL 01 · DESIGN GUIDELINES AUDIT', stageX + 44, stageY + 60);
+
+        ctx.font = '900 44px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF';
+        ctx.fillText('Apple Look', stageX + 44, stageY + 115);
+
+        ctx.font = '500 20px -apple-system, sans-serif'; ctx.fillStyle = '#94A3B8';
+        ctx.fillText('Audits every component against Apple Human Interface Guidelines', stageX + 44, stageY + 155);
+
+        const sgY = stageY + 195;
+        ctx.fillStyle = '#0B0F19'; ctx.strokeStyle = '#1E293B'; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.roundRect(stageX + 44, sgY, 832, 470, 16); ctx.fill(); ctx.stroke();
+
+        const specs = [
+          { title: '8-Point Spatial Grid', val: '8px, 16px, 24px, 32px strict padding multiples', stat: 'ENFORCED ✓' },
+          { title: 'SF Pro Typography Scale', val: 'Large Title (34px) · Headline (17px bold) · Body (15px)', stat: 'OPTICAL SCALE ✓' },
+          { title: 'Specular Edge Highlight', val: '1px white border at 8-12% opacity on raised dark surfaces', stat: 'APPLE POLISH ✓' },
+          { title: 'Negative Space Ratios', val: 'Content density balanced to 45% minimum resting negative space', stat: 'BREATHING ROOM ✓' }
+        ];
+
+        specs.forEach((sp, idx) => {
+          const sy = sgY + 28 + idx * 105;
+          ctx.fillStyle = '#111827'; ctx.strokeStyle = '#1F2937'; ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.roundRect(stageX + 68, sy, 784, 85, 12); ctx.fill(); ctx.stroke();
+
+          ctx.font = '700 22px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF'; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+          ctx.fillText(sp.title, stageX + 92, sy + 32);
+
+          ctx.font = '500 15px -apple-system, sans-serif'; ctx.fillStyle = '#94A3B8';
+          ctx.fillText(sp.val, stageX + 92, sy + 60);
+
+          ctx.fillStyle = 'rgba(56, 189, 248, 0.15)'; ctx.strokeStyle = '#38BDF8'; ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.roundRect(stageX + 660, sy + 25, 170, 36, 18); ctx.fill(); ctx.stroke();
+          ctx.font = '700 12px ui-monospace, monospace'; ctx.fillStyle = '#38BDF8'; ctx.textAlign = 'center';
+          ctx.fillText(sp.stat, stageX + 745, sy + 43);
+        });
+
+      } else if (t < T.l5[0]) {
+        // --- SCENE 4: SKILL 02 BETTER INTERFACE ---
+        drawGlassCard(stageX, stageY, 920, 720);
+
+        ctx.font = '800 16px ui-monospace, monospace'; ctx.fillStyle = '#10B981'; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+        ctx.fillText('SKILL 02 · TYPOGRAPHY & SPACING POLISH', stageX + 44, stageY + 60);
+
+        ctx.font = '900 44px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF';
+        ctx.fillText('Better Interface', stageX + 44, stageY + 115);
+
+        ctx.font = '500 20px -apple-system, sans-serif'; ctx.fillStyle = '#94A3B8';
+        ctx.fillText('Eliminates amateur spacing, unreadable contrast, and sloppy layout tokens', stageX + 44, stageY + 155);
+
+        const biY = stageY + 195;
+        ctx.fillStyle = '#0B0F19'; ctx.strokeStyle = '#1E293B'; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.roundRect(stageX + 44, biY, 832, 470, 16); ctx.fill(); ctx.stroke();
+
+        const biFeatures = [
+          { label: 'Color Contrast Audit', desc: 'WCAG AAA (7:1 ratio on all primary headlines and controls)', stat: 'AAA RATIO ✓' },
+          { label: 'Micro-Typography Kerning', desc: 'Tracking -0.025em on large titles, tabular numerals on metrics', stat: 'TUNED ✓' },
+          { label: 'Surface Step Ladder', desc: 'Base #060709 → Surface 1 #0E121B → Surface 2 #161D2B', stat: 'NO FLAT GREYS ✓' },
+          { label: 'Single Luminous Brand Accent', desc: 'Reserves high saturation for the primary action only', stat: 'CLEAN FOCUS ✓' }
+        ];
+
+        biFeatures.forEach((bf, idx) => {
+          const sy = biY + 28 + idx * 105;
+          ctx.fillStyle = '#111827'; ctx.strokeStyle = '#1F2937'; ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.roundRect(stageX + 68, sy, 784, 85, 12); ctx.fill(); ctx.stroke();
+
+          ctx.font = '700 22px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF'; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+          ctx.fillText(bf.label, stageX + 92, sy + 32);
+
+          ctx.font = '500 15px -apple-system, sans-serif'; ctx.fillStyle = '#94A3B8';
+          ctx.fillText(bf.desc, stageX + 92, sy + 60);
+
+          ctx.fillStyle = 'rgba(16, 185, 129, 0.15)'; ctx.strokeStyle = '#10B981'; ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.roundRect(stageX + 660, sy + 25, 170, 36, 18); ctx.fill(); ctx.stroke();
+          ctx.font = '700 12px ui-monospace, monospace'; ctx.fillStyle = '#10B981'; ctx.textAlign = 'center';
+          ctx.fillText(bf.stat, stageX + 745, sy + 43);
+        });
+
+      } else if (t < T.l6[0]) {
+        // --- SCENE 5: SKILL 03 APPLE DESIGN (Motion & Spring Physics) ---
+        drawGlassCard(stageX, stageY, 920, 720);
+
+        ctx.font = '800 16px ui-monospace, monospace'; ctx.fillStyle = '#F59E0B'; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+        ctx.fillText('SKILL 03 · FLUID SPRING DYNAMICS', stageX + 44, stageY + 60);
+
+        ctx.font = '900 44px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF';
+        ctx.fillText('Apple Design', stageX + 44, stageY + 115);
+
+        ctx.font = '500 20px -apple-system, sans-serif'; ctx.fillStyle = '#94A3B8';
+        ctx.fillText('Replaces robotic linear CSS transitions with natural spring physics', stageX + 44, stageY + 155);
+
+        const spY = stageY + 195;
+        ctx.fillStyle = '#0B0F19'; ctx.strokeStyle = '#1E293B'; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.roundRect(stageX + 44, spY, 832, 470, 16); ctx.fill(); ctx.stroke();
+
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)'; ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(stageX + 80, spY + 180); ctx.lineTo(stageX + 830, spY + 180); ctx.stroke();
+
+        ctx.strokeStyle = '#F59E0B'; ctx.lineWidth = 3;
+        ctx.shadowColor = 'rgba(245, 158, 11, 0.4)'; ctx.shadowBlur = 10;
+        ctx.beginPath();
+        for (let x = 0; x <= 750; x += 5) {
+          const u = x / 750;
+          const decay = Math.exp(-u * 4);
+          const wave = Math.sin(u * 14 - t * 6) * decay;
+          const y = spY + 180 - wave * 110;
+          x === 0 ? ctx.moveTo(stageX + 80 + x, y) : ctx.lineTo(stageX + 80 + x, y);
+        }
+        ctx.stroke();
+        ctx.shadowBlur = 0;
+        ctx.shadowColor = 'transparent';
+
+        ctx.fillStyle = '#111827'; ctx.strokeStyle = '#273147'; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.roundRect(stageX + 80, spY + 280, 760, 140, 14); ctx.fill(); ctx.stroke();
+
+        ctx.font = '700 18px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF'; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+        ctx.fillText('Native Spring Motion Tokens:', stageX + 110, spY + 315);
+
+        ctx.font = '600 15px ui-monospace, monospace'; ctx.fillStyle = '#F59E0B';
+        ctx.fillText('stiffness: 240  ·  damping: 18  ·  mass: 0.6  ·  overshoot: 1.12', stageX + 110, spY + 350);
+        ctx.fillStyle = '#94A3B8';
+        ctx.fillText('Zero lag, fluid deceleration, instant tactile finger response', stageX + 110, spY + 385);
+
+      } else if (t < T.l7[0]) {
+        // --- SCENE 6: SKILL 04 SUPERFUTURE DESIGN REVIEW ---
+        drawGlassCard(stageX, stageY, 920, 720);
+
+        ctx.font = '800 16px ui-monospace, monospace'; ctx.fillStyle = '#A855F7'; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+        ctx.fillText('SKILL 04 · SENIOR CRITIQUE ENGINE', stageX + 44, stageY + 60);
+
+        ctx.font = '900 44px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF';
+        ctx.fillText('Superfuture Design Review', stageX + 44, stageY + 115);
+
+        ctx.font = '500 20px -apple-system, sans-serif'; ctx.fillStyle = '#94A3B8';
+        ctx.fillText('Acts as a senior design director with prioritized, high-leverage fixes', stageX + 44, stageY + 155);
+
+        const sfY = stageY + 195;
+        ctx.fillStyle = '#0B0F19'; ctx.strokeStyle = '#1E293B'; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.roundRect(stageX + 44, sfY, 832, 470, 16); ctx.fill(); ctx.stroke();
+
+        const critiques = [
+          { p: 'P1 CRITICAL', fix: 'Increase visual hierarchy on primary CTA button', done: 'RESOLVED ✓', c: '#EF4444' },
+          { p: 'P1 CRITICAL', fix: 'Eliminate harsh border contrast on dark cards', done: 'RESOLVED ✓', c: '#EF4444' },
+          { p: 'P2 POLISH', fix: 'Harmonize micro-radii to 16px corner squircles', done: 'RESOLVED ✓', c: '#F59E0B' },
+          { p: 'P2 POLISH', fix: 'Add subtle top specular line highlight across glass', done: 'RESOLVED ✓', c: '#F59E0B' }
+        ];
+
+        critiques.forEach((cq, idx) => {
+          const sy = sfY + 28 + idx * 105;
+          ctx.fillStyle = '#111827'; ctx.strokeStyle = '#1F2937'; ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.roundRect(stageX + 68, sy, 784, 85, 12); ctx.fill(); ctx.stroke();
+
+          ctx.fillStyle = cq.c; ctx.font = '800 12px ui-monospace, monospace'; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+          ctx.fillText(cq.p, stageX + 92, sy + 28);
+
+          ctx.font = '600 18px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF';
+          ctx.fillText(cq.fix, stageX + 92, sy + 58);
+
+          ctx.fillStyle = 'rgba(168, 85, 247, 0.15)'; ctx.strokeStyle = '#A855F7'; ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.roundRect(stageX + 660, sy + 25, 170, 36, 18); ctx.fill(); ctx.stroke();
+          ctx.font = '700 12px ui-monospace, monospace'; ctx.fillStyle = '#C084FC'; ctx.textAlign = 'center';
+          ctx.fillText(cq.done, stageX + 745, sy + 43);
+        });
+
+      } else {
+        // --- SCENE 7: CALL TO ACTION ---
+        drawGlassCard(stageX, stageY + 80, 920, 620);
+
+        ctx.save();
+        ctx.translate(stageX + 460, stageY + 160);
+
+        // Pinned Comment Badge
+        ctx.fillStyle = '#FEF3C7'; ctx.strokeStyle = '#F59E0B'; ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.roundRect(-160, -22, 320, 44, 22); ctx.fill(); ctx.stroke();
+        ctx.font = '800 16px -apple-system, sans-serif'; ctx.fillStyle = '#92400E'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        ctx.fillText('📌 CHECK PINNED COMMENT', 0, 0);
+
+        // Giant Title
+        ctx.font = '900 68px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF';
+        ctx.fillText('COMMENT "WEBSITE"', 0, 90);
+
+        ctx.font = '600 24px -apple-system, sans-serif'; ctx.fillStyle = '#94A3B8';
+        ctx.fillText('For all 4 Claude design skills, setup guide & master prompt', 0, 160);
+
+        // 4 Skill Pills
+        const pills = ['1. Apple Look', '2. Better Interface', '3. Apple Design', '4. Superfuture'];
+        pills.forEach((pl, i) => {
+          const px = -340 + i * 230;
+          ctx.fillStyle = '#0F1626'; ctx.strokeStyle = '#273147'; ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.roundRect(px, 220, 210, 48, 12); ctx.fill(); ctx.stroke();
+          ctx.font = '700 14px ui-monospace, monospace'; ctx.fillStyle = '#38BDF8';
+          ctx.fillText(pl, px + 105, 244);
+        });
+
+        // Link Button
+        ctx.fillStyle = '#38BDF8';
+        ctx.beginPath(); ctx.roundRect(-220, 310, 440, 56, 16); ctx.fill();
+        ctx.font = '800 20px -apple-system, sans-serif'; ctx.fillStyle = '#050B14';
+        ctx.fillText('👉 FULL REPO & PROMPTS IN DMs', 0, 338);
+
+        ctx.restore();
+      }
+
+      // 4. Toast Subtitle Box (Wide 940px, NO SHADOW GHOSTING, NO GREEN DOT, PERFECT FIT)
+      ctx.save();
+      const toastY = 1600;
+      const toastW = 940;
+      const toastH = 118;
+
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.75)';
+      ctx.shadowBlur = 24;
+      ctx.shadowOffsetY = 12;
+
+      ctx.fillStyle = 'rgba(12, 16, 26, 0.96)';
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.14)';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.roundRect(W / 2 - toastW / 2, toastY, toastW, toastH, 24);
+      ctx.fill();
+      ctx.stroke();
+
+      // Clear all shadow parameters explicitly to prevent text ghosting
+      ctx.shadowBlur = 0;
+      ctx.shadowColor = 'transparent';
+
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+
+      if (t < T.l2[0]) {
+        ctx.font = '700 22px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF';
+        ctx.fillText('"Your Claude websites look clean at first...', W / 2, toastY + 40);
+        ctx.fillStyle = '#38BDF8';
+        ctx.fillText('but why do they lack that premium Apple finish?"', W / 2, toastY + 76);
+      } else if (t < T.l3[0]) {
+        ctx.font = '700 22px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF';
+        ctx.fillText('"Because Claude defaults to generic component boilerplate.', W / 2, toastY + 40);
+        ctx.fillStyle = '#38BDF8';
+        ctx.fillText('To get Apple polish, you need four specific design skills."', W / 2, toastY + 76);
+      } else if (t < T.l4[0]) {
+        ctx.font = '700 21px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF';
+        ctx.fillText('"First is Apple Look: audits UI against Human Interface Guidelines,', W / 2, toastY + 40);
+        ctx.fillStyle = '#38BDF8';
+        ctx.fillText('enforcing 8-point spacing, SF Pro type, and negative space."', W / 2, toastY + 76);
+      } else if (t < T.l5[0]) {
+        ctx.font = '700 22px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF';
+        ctx.fillText('"Second is Better Interface: fixes subtle typography scaling,', W / 2, toastY + 40);
+        ctx.fillStyle = '#10B981';
+        ctx.fillText('optical margins, accessibility contrast, and surface elevation."', W / 2, toastY + 76);
+      } else if (t < T.l6[0]) {
+        ctx.font = '700 22px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF';
+        ctx.fillText('"Third is Apple Design: replaces stiff linear CSS transitions', W / 2, toastY + 40);
+        ctx.fillStyle = '#F59E0B';
+        ctx.fillText('with natural spring physics, fluid momentum, and tactile feel."', W / 2, toastY + 76);
+      } else if (t < T.l7[0]) {
+        ctx.font = '700 22px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF';
+        ctx.fillText('"Fourth is Superfuture Review: acts as a senior design director,', W / 2, toastY + 40);
+        ctx.fillStyle = '#C084FC';
+        ctx.fillText('giving prioritized, actionable critiques before you push code."', W / 2, toastY + 76);
+      } else {
+        ctx.font = '700 22px -apple-system, sans-serif'; ctx.fillStyle = '#FFFFFF';
+        ctx.fillText('"Comment WEBSITE below to get all four Claude skills,', W / 2, toastY + 40);
+        ctx.fillStyle = '#F59E0B';
+        ctx.fillText('the setup guide, and master prompt sent straight to your DMs."', W / 2, toastY + 76);
+      }
+      ctx.restore();
+
+      // 5. Footer Signature
+      ctx.save();
+      ctx.font = '600 17px ui-monospace, monospace';
+      ctx.fillStyle = '#475569';
+      ctx.textAlign = 'center';
+      ctx.fillText('DARK TECH KEYNOTE · 4 CLAUDE DESIGN SKILLS', W / 2, 1860);
+      ctx.restore();
+    };
+
+    window.renderFrame(100);
+  </script>
+</body>
+</html>
