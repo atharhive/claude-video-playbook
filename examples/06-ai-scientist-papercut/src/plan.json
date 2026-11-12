@@ -1,0 +1,912 @@
+{
+ "fps": 30,
+ "durationInFrames": 1825,
+ "scenes": [
+  {
+   "id": "S01PaperInPeril",
+   "from": 0,
+   "durationInFrames": 155,
+   "words": [
+    {
+     "text": "What",
+     "f": 6,
+     "e": 16
+    },
+    {
+     "text": "if",
+     "f": 16,
+     "e": 25
+    },
+    {
+     "text": "an",
+     "f": 25,
+     "e": 35
+    },
+    {
+     "text": "AI",
+     "f": 35,
+     "e": 44
+    },
+    {
+     "text": "could",
+     "f": 44,
+     "e": 54
+    },
+    {
+     "text": "stress-test,",
+     "f": 54,
+     "e": 63
+    },
+    {
+     "text": "rewrite,",
+     "f": 63,
+     "e": 73
+    },
+    {
+     "text": "and",
+     "f": 73,
+     "e": 83
+    },
+    {
+     "text": "upgrade",
+     "f": 83,
+     "e": 92
+    },
+    {
+     "text": "your",
+     "f": 92,
+     "e": 102
+    },
+    {
+     "text": "research",
+     "f": 102,
+     "e": 111
+    },
+    {
+     "text": "paper",
+     "f": 111,
+     "e": 121
+    },
+    {
+     "text": "while",
+     "f": 121,
+     "e": 130
+    },
+    {
+     "text": "you",
+     "f": 130,
+     "e": 140
+    },
+    {
+     "text": "sleep?",
+     "f": 140,
+     "e": 149
+    }
+   ]
+  },
+  {
+   "id": "S02AutomatedReviewer",
+   "from": 155,
+   "durationInFrames": 394,
+   "words": [
+    {
+     "text": "This",
+     "f": 2,
+     "e": 15
+    },
+    {
+     "text": "open-source",
+     "f": 15,
+     "e": 29
+    },
+    {
+     "text": "setup",
+     "f": 29,
+     "e": 42
+    },
+    {
+     "text": "gives",
+     "f": 42,
+     "e": 55
+    },
+    {
+     "text": "Claude",
+     "f": 55,
+     "e": 69
+    },
+    {
+     "text": "your",
+     "f": 69,
+     "e": 82
+    },
+    {
+     "text": "paper",
+     "f": 82,
+     "e": 95
+    },
+    {
+     "text": "manuscript",
+     "f": 95,
+     "e": 109
+    },
+    {
+     "text": "and",
+     "f": 109,
+     "e": 122
+    },
+    {
+     "text": "experimental",
+     "f": 122,
+     "e": 136
+    },
+    {
+     "text": "code",
+     "f": 136,
+     "e": 149
+    },
+    {
+     "text": "before",
+     "f": 149,
+     "e": 162
+    },
+    {
+     "text": "bed.",
+     "f": 162,
+     "e": 176
+    },
+    {
+     "text": "An",
+     "f": 176,
+     "e": 189
+    },
+    {
+     "text": "automated",
+     "f": 189,
+     "e": 202
+    },
+    {
+     "text": "reviewer",
+     "f": 202,
+     "e": 216
+    },
+    {
+     "text": "agent",
+     "f": 216,
+     "e": 229
+    },
+    {
+     "text": "tears",
+     "f": 229,
+     "e": 242
+    },
+    {
+     "text": "the",
+     "f": 242,
+     "e": 256
+    },
+    {
+     "text": "paper",
+     "f": 256,
+     "e": 269
+    },
+    {
+     "text": "apart,",
+     "f": 269,
+     "e": 282
+    },
+    {
+     "text": "finding",
+     "f": 282,
+     "e": 296
+    },
+    {
+     "text": "weak",
+     "f": 296,
+     "e": 309
+    },
+    {
+     "text": "baselines,",
+     "f": 309,
+     "e": 323
+    },
+    {
+     "text": "flawed",
+     "f": 323,
+     "e": 336
+    },
+    {
+     "text": "logic,",
+     "f": 336,
+     "e": 349
+    },
+    {
+     "text": "and",
+     "f": 349,
+     "e": 363
+    },
+    {
+     "text": "unsupported",
+     "f": 363,
+     "e": 376
+    },
+    {
+     "text": "claims.",
+     "f": 376,
+     "e": 389
+    }
+   ]
+  },
+  {
+   "id": "S03OvernightExperiments",
+   "from": 549,
+   "durationInFrames": 431,
+   "words": [
+    {
+     "text": "Then",
+     "f": 3,
+     "e": 12
+    },
+    {
+     "text": "Claude",
+     "f": 12,
+     "e": 22
+    },
+    {
+     "text": "Code",
+     "f": 22,
+     "e": 32
+    },
+    {
+     "text": "runs",
+     "f": 32,
+     "e": 41
+    },
+    {
+     "text": "experiments",
+     "f": 41,
+     "e": 51
+    },
+    {
+     "text": "to",
+     "f": 51,
+     "e": 61
+    },
+    {
+     "text": "fix",
+     "f": 61,
+     "e": 70
+    },
+    {
+     "text": "what",
+     "f": 70,
+     "e": 80
+    },
+    {
+     "text": "it",
+     "f": 80,
+     "e": 89
+    },
+    {
+     "text": "found.",
+     "f": 89,
+     "e": 99
+    },
+    {
+     "text": "In",
+     "f": 99,
+     "e": 109
+    },
+    {
+     "text": "the",
+     "f": 109,
+     "e": 118
+    },
+    {
+     "text": "team's",
+     "f": 118,
+     "e": 128
+    },
+    {
+     "text": "real",
+     "f": 128,
+     "e": 138
+    },
+    {
+     "text": "overnight",
+     "f": 138,
+     "e": 147
+    },
+    {
+     "text": "benchmark,",
+     "f": 147,
+     "e": 157
+    },
+    {
+     "text": "it",
+     "f": 157,
+     "e": 166
+    },
+    {
+     "text": "ran",
+     "f": 166,
+     "e": 176
+    },
+    {
+     "text": "over",
+     "f": 176,
+     "e": 186
+    },
+    {
+     "text": "twenty",
+     "f": 186,
+     "e": 195
+    },
+    {
+     "text": "experiments,",
+     "f": 195,
+     "e": 205
+    },
+    {
+     "text": "dropped",
+     "f": 205,
+     "e": 215
+    },
+    {
+     "text": "a",
+     "f": 215,
+     "e": 224
+    },
+    {
+     "text": "failing",
+     "f": 224,
+     "e": 234
+    },
+    {
+     "text": "core",
+     "f": 234,
+     "e": 243
+    },
+    {
+     "text": "claim",
+     "f": 243,
+     "e": 253
+    },
+    {
+     "text": "instead",
+     "f": 253,
+     "e": 263
+    },
+    {
+     "text": "of",
+     "f": 263,
+     "e": 272
+    },
+    {
+     "text": "hiding",
+     "f": 272,
+     "e": 282
+    },
+    {
+     "text": "it,",
+     "f": 282,
+     "e": 292
+    },
+    {
+     "text": "and",
+     "f": 292,
+     "e": 301
+    },
+    {
+     "text": "the",
+     "f": 301,
+     "e": 311
+    },
+    {
+     "text": "review",
+     "f": 311,
+     "e": 320
+    },
+    {
+     "text": "score",
+     "f": 320,
+     "e": 330
+    },
+    {
+     "text": "jumped",
+     "f": 330,
+     "e": 340
+    },
+    {
+     "text": "from",
+     "f": 340,
+     "e": 349
+    },
+    {
+     "text": "five",
+     "f": 349,
+     "e": 359
+    },
+    {
+     "text": "out",
+     "f": 359,
+     "e": 369
+    },
+    {
+     "text": "of",
+     "f": 369,
+     "e": 378
+    },
+    {
+     "text": "ten",
+     "f": 378,
+     "e": 388
+    },
+    {
+     "text": "to",
+     "f": 388,
+     "e": 397
+    },
+    {
+     "text": "seven",
+     "f": 397,
+     "e": 407
+    },
+    {
+     "text": "point",
+     "f": 407,
+     "e": 417
+    },
+    {
+     "text": "five.",
+     "f": 417,
+     "e": 426
+    }
+   ]
+  },
+  {
+   "id": "S04TheCatch",
+   "from": 980,
+   "durationInFrames": 370,
+   "words": [
+    {
+     "text": "Now",
+     "f": 3,
+     "e": 13
+    },
+    {
+     "text": "for",
+     "f": 13,
+     "e": 24
+    },
+    {
+     "text": "the",
+     "f": 24,
+     "e": 35
+    },
+    {
+     "text": "catch.",
+     "f": 35,
+     "e": 45
+    },
+    {
+     "text": "It",
+     "f": 45,
+     "e": 56
+    },
+    {
+     "text": "requires",
+     "f": 56,
+     "e": 67
+    },
+    {
+     "text": "GPU",
+     "f": 67,
+     "e": 77
+    },
+    {
+     "text": "compute",
+     "f": 77,
+     "e": 88
+    },
+    {
+     "text": "to",
+     "f": 88,
+     "e": 99
+    },
+    {
+     "text": "run",
+     "f": 99,
+     "e": 109
+    },
+    {
+     "text": "the",
+     "f": 109,
+     "e": 120
+    },
+    {
+     "text": "experiments,",
+     "f": 120,
+     "e": 131
+    },
+    {
+     "text": "and",
+     "f": 131,
+     "e": 141
+    },
+    {
+     "text": "an",
+     "f": 141,
+     "e": 152
+    },
+    {
+     "text": "AI",
+     "f": 152,
+     "e": 163
+    },
+    {
+     "text": "score",
+     "f": 163,
+     "e": 173
+    },
+    {
+     "text": "is",
+     "f": 173,
+     "e": 184
+    },
+    {
+     "text": "not",
+     "f": 184,
+     "e": 195
+    },
+    {
+     "text": "a",
+     "f": 195,
+     "e": 205
+    },
+    {
+     "text": "substitute",
+     "f": 205,
+     "e": 216
+    },
+    {
+     "text": "for",
+     "f": 216,
+     "e": 227
+    },
+    {
+     "text": "peer",
+     "f": 227,
+     "e": 237
+    },
+    {
+     "text": "review.",
+     "f": 237,
+     "e": 248
+    },
+    {
+     "text": "You",
+     "f": 248,
+     "e": 259
+    },
+    {
+     "text": "still",
+     "f": 259,
+     "e": 269
+    },
+    {
+     "text": "have",
+     "f": 269,
+     "e": 280
+    },
+    {
+     "text": "to",
+     "f": 280,
+     "e": 290
+    },
+    {
+     "text": "verify",
+     "f": 290,
+     "e": 301
+    },
+    {
+     "text": "every",
+     "f": 301,
+     "e": 312
+    },
+    {
+     "text": "single",
+     "f": 312,
+     "e": 322
+    },
+    {
+     "text": "claim",
+     "f": 322,
+     "e": 333
+    },
+    {
+     "text": "yourself",
+     "f": 333,
+     "e": 344
+    },
+    {
+     "text": "before",
+     "f": 344,
+     "e": 354
+    },
+    {
+     "text": "submitting.",
+     "f": 354,
+     "e": 365
+    }
+   ]
+  },
+  {
+   "id": "S05CtaNiche",
+   "from": 1350,
+   "durationInFrames": 475,
+   "words": [
+    {
+     "text": "You",
+     "f": 3,
+     "e": 11
+    },
+    {
+     "text": "do",
+     "f": 11,
+     "e": 19
+    },
+    {
+     "text": "not",
+     "f": 19,
+     "e": 27
+    },
+    {
+     "text": "even",
+     "f": 27,
+     "e": 36
+    },
+    {
+     "text": "have",
+     "f": 36,
+     "e": 44
+    },
+    {
+     "text": "to",
+     "f": 44,
+     "e": 52
+    },
+    {
+     "text": "follow",
+     "f": 52,
+     "e": 61
+    },
+    {
+     "text": "me.",
+     "f": 61,
+     "e": 69
+    },
+    {
+     "text": "Just",
+     "f": 69,
+     "e": 77
+    },
+    {
+     "text": "comment",
+     "f": 77,
+     "e": 86
+    },
+    {
+     "text": "REJECT",
+     "f": 86,
+     "e": 94
+    },
+    {
+     "text": "below",
+     "f": 94,
+     "e": 102
+    },
+    {
+     "text": "and",
+     "f": 102,
+     "e": 111
+    },
+    {
+     "text": "I",
+     "f": 111,
+     "e": 119
+    },
+    {
+     "text": "will",
+     "f": 119,
+     "e": 127
+    },
+    {
+     "text": "send",
+     "f": 127,
+     "e": 135
+    },
+    {
+     "text": "you",
+     "f": 135,
+     "e": 144
+    },
+    {
+     "text": "the",
+     "f": 144,
+     "e": 152
+    },
+    {
+     "text": "GitHub",
+     "f": 152,
+     "e": 160
+    },
+    {
+     "text": "repo",
+     "f": 160,
+     "e": 169
+    },
+    {
+     "text": "and",
+     "f": 169,
+     "e": 177
+    },
+    {
+     "text": "the",
+     "f": 177,
+     "e": 185
+    },
+    {
+     "text": "Claude",
+     "f": 185,
+     "e": 194
+    },
+    {
+     "text": "prompt",
+     "f": 194,
+     "e": 202
+    },
+    {
+     "text": "setup.",
+     "f": 202,
+     "e": 210
+    },
+    {
+     "text": "I",
+     "f": 210,
+     "e": 218
+    },
+    {
+     "text": "share",
+     "f": 218,
+     "e": 227
+    },
+    {
+     "text": "niche",
+     "f": 227,
+     "e": 235
+    },
+    {
+     "text": "engineering",
+     "f": 235,
+     "e": 243
+    },
+    {
+     "text": "resources",
+     "f": 243,
+     "e": 252
+    },
+    {
+     "text": "and",
+     "f": 252,
+     "e": 260
+    },
+    {
+     "text": "tools",
+     "f": 260,
+     "e": 268
+    },
+    {
+     "text": "like",
+     "f": 268,
+     "e": 277
+    },
+    {
+     "text": "this",
+     "f": 277,
+     "e": 285
+    },
+    {
+     "text": "every",
+     "f": 285,
+     "e": 293
+    },
+    {
+     "text": "day,",
+     "f": 293,
+     "e": 301
+    },
+    {
+     "text": "so",
+     "f": 301,
+     "e": 310
+    },
+    {
+     "text": "do",
+     "f": 310,
+     "e": 318
+    },
+    {
+     "text": "give",
+     "f": 318,
+     "e": 326
+    },
+    {
+     "text": "me",
+     "f": 326,
+     "e": 335
+    },
+    {
+     "text": "a",
+     "f": 335,
+     "e": 343
+    },
+    {
+     "text": "follow",
+     "f": 343,
+     "e": 351
+    },
+    {
+     "text": "if",
+     "f": 351,
+     "e": 360
+    },
+    {
+     "text": "you",
+     "f": 360,
+     "e": 368
+    },
+    {
+     "text": "want",
+     "f": 368,
+     "e": 376
+    },
+    {
+     "text": "them",
+     "f": 376,
+     "e": 384
+    },
+    {
+     "text": "on",
+     "f": 384,
+     "e": 393
+    },
+    {
+     "text": "your",
+     "f": 393,
+     "e": 401
+    },
+    {
+     "text": "feed.",
+     "f": 401,
+     "e": 409
+    }
+   ]
+  }
+ ],
+ "hook": {
+  "lines": [
+   [
+    "SAVED FROM"
+   ],
+   [
+    "A REJECT?"
+   ]
+  ],
+  "hot": [
+   "REJECT?"
+  ],
+  "top": 140,
+  "size": 86,
+  "outAt": 75
+ }
+}

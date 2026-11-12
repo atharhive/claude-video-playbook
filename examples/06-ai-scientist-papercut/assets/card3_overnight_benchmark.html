@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  body { background: #0B0E14; color: #fff; width: 1200px; height: 760px; padding: 36px 44px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; }
+  .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1E293B; padding-bottom: 16px; }
+  .title { font-size: 28px; font-weight: 800; display: flex; align-items: center; gap: 12px; }
+  .score-comparison { display: grid; grid-template-columns: 1fr 80px 1fr; gap: 20px; align-items: center; margin: 24px 0; }
+  .score-box { background: #131926; border-radius: 14px; padding: 32px; border: 1px solid #232F45; text-align: center; }
+  .score-box.before { border-color: rgba(239, 68, 68, 0.4); }
+  .score-box.after { border-color: rgba(34, 197, 94, 0.5); box-shadow: 0 12px 32px rgba(34, 197, 94, 0.15); }
+  .score-tag { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
+  .score-num { font-size: 80px; font-weight: 900; line-height: 1; margin-bottom: 8px; }
+  .score-status { font-size: 18px; font-weight: 700; }
+  .arrow-box { font-size: 44px; font-weight: 900; color: #64748B; text-align: center; }
+  .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .res-item { background: #111827; border: 1px solid #1F2937; border-radius: 10px; padding: 18px 22px; }
+  .res-label { font-size: 13px; color: #94A3B8; text-transform: uppercase; font-weight: 700; margin-bottom: 6px; }
+  .res-val { font-size: 20px; font-weight: 800; color: #E2E8F0; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">
+      <span>⚡ Overnight AI Benchmark Results</span>
+      <span style="background:rgba(34,197,94,0.15); border:1px solid #22C55E; color:#4ADE80; font-size:13px; font-weight:800; padding:4px 14px; border-radius:20px;">ROUND 4 CONCLUDED</span>
+    </div>
+    <div style="font-size: 15px; color: #94A3B8;">Sakana AI Scientist Overnight Benchmark</div>
+  </div>
+
+  <div class="score-comparison">
+    <div class="score-box before">
+      <div class="score-tag" style="color:#F87171;">Initial Review (11:00 PM)</div>
+      <div class="score-num" style="color:#EF4444;">5.0</div>
+      <div class="score-status" style="color:#F87171;">Borderline Reject</div>
+    </div>
+
+    <div class="arrow-box">➔</div>
+
+    <div class="score-box after">
+      <div class="score-tag" style="color:#4ADE80;">Overnight Revision (7:00 AM)</div>
+      <div class="score-num" style="color:#22C55E;">7.5</div>
+      <div class="score-status" style="color:#4ADE80;">Official Workshop Accept</div>
+    </div>
+  </div>
+
+  <div class="results-grid">
+    <div class="res-item">
+      <div class="res-label">Autonomous Experiments</div>
+      <div class="res-val" style="color:#38BDF8;">24 Test Sweeps Run</div>
+    </div>
+    <div class="res-item">
+      <div class="res-label">Hypothesis Honesty</div>
+      <div class="res-val" style="color:#F59E0B;">Dropped Failed Claim</div>
+    </div>
+    <div class="res-item">
+      <div class="res-label">Peer-Review Outcome</div>
+      <div class="res-val" style="color:#4ADE80;">Top 45% of Submissions</div>
+    </div>
+  </div>
+</body>
+</html>

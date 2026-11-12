@@ -1,0 +1,41 @@
+{
+  "comp": "AiScientistPapercut",
+  "out": "ai-scientist-papercut",
+  "narration": "./narration",
+  "timing": "timing_narrator.js",
+  "fps": 30,
+  "start": 0.2,
+  "gap": 0.25,
+  "hold": 2.2,
+  "whipScene": "S03OvernightExperiments",
+  "hook": {
+    "lines": [
+      ["SAVED FROM"],
+      ["A REJECT?"]
+    ],
+    "hot": ["REJECT?"],
+    "top": 140,
+    "size": 86,
+    "hold": 2.5
+  },
+  "scenes": [
+    ["S01PaperInPeril", "l1_hook", 0],
+    ["S02AutomatedReviewer", "l2_setup", 0],
+    ["S03OvernightExperiments", "l3_overnight", 0],
+    ["S04TheCatch", "l4_catch", 0],
+    ["S05CtaNiche", "l5_cta", 0]
+  ],
+  "banners": {
+    "S01PaperInPeril": "SAVED FROM A REJECT",
+    "S02AutomatedReviewer": "THE OVERNIGHT REVIEW LOOP",
+    "S03OvernightExperiments": "SCORE JUMP: 5.0 TO 7.5 ACCEPT",
+    "S04TheCatch": "THE PRACTICAL REALITY",
+    "S05CtaNiche": "COMMENT REJECT FOR REPO"
+  },
+  "cuts": {
+    "S02AutomatedReviewer": {"kind": "tapePull", "label": "CLAUDE RESCUE"},
+    "S03OvernightExperiments": {"kind": "whip"},
+    "S04TheCatch": {"kind": "tearAway"},
+    "S05CtaNiche": {"kind": "stampCut"}
+  }
+}

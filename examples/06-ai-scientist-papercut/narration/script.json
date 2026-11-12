@@ -1,0 +1,27 @@
+[
+  {
+    "id": "l1_hook",
+    "speaker": "narrator",
+    "text": "What if an AI could stress-test, rewrite, and upgrade your research paper while you sleep?"
+  },
+  {
+    "id": "l2_setup",
+    "speaker": "narrator",
+    "text": "This open-source setup gives Claude your paper manuscript and experimental code before bed. An automated reviewer agent tears the paper apart, finding weak baselines, flawed logic, and unsupported claims."
+  },
+  {
+    "id": "l3_overnight",
+    "speaker": "narrator",
+    "text": "Then Claude Code runs experiments to fix what it found. In the team's real overnight benchmark, it ran over twenty experiments, dropped a failing core claim instead of hiding it, and the review score jumped from five out of ten to seven point five."
+  },
+  {
+    "id": "l4_catch",
+    "speaker": "narrator",
+    "text": "Now for the catch. It requires GPU compute to run the experiments, and an AI score is not a substitute for peer review. You still have to verify every single claim yourself before submitting."
+  },
+  {
+    "id": "l5_cta",
+    "speaker": "narrator",
+    "text": "You do not even have to follow me. Just comment REJECT below and I will send you the GitHub repo and the Claude prompt setup. I share niche engineering resources and tools like this every day, so do give me a follow if you want them on your feed."
+  }
+]
