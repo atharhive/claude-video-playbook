@@ -1,11 +1,11 @@
 {
  "fps": 30,
- "durationInFrames": 297,
+ "durationInFrames": 1707,
  "scenes": [
   {
    "id": "S01BlackoutHook",
    "from": 0,
-   "durationInFrames": 134,
+   "durationInFrames": 148,
    "words": [
     {
      "text": "If",
@@ -20,129 +20,679 @@
     {
      "text": "world's",
      "f": 19,
-     "e": 31
+     "e": 33
     },
     {
      "text": "internet",
-     "f": 32,
-     "e": 46
+     "f": 34,
+     "e": 50
     },
     {
      "text": "went",
-     "f": 48,
-     "e": 55
+     "f": 51,
+     "e": 59
     },
     {
      "text": "down",
-     "f": 56,
-     "e": 63
+     "f": 60,
+     "e": 68
     },
     {
      "text": "tomorrow,",
-     "f": 64,
-     "e": 80
+     "f": 68,
+     "e": 86
     },
     {
      "text": "what",
-     "f": 81,
-     "e": 88
+     "f": 87,
+     "e": 95
     },
     {
      "text": "could",
-     "f": 90,
-     "e": 98
+     "f": 96,
+     "e": 106
     },
     {
      "text": "your",
-     "f": 100,
-     "e": 107
+     "f": 107,
+     "e": 115
     },
     {
      "text": "computer",
-     "f": 108,
-     "e": 122
+     "f": 116,
+     "e": 131
     },
     {
      "text": "still",
-     "f": 123,
-     "e": 132
+     "f": 132,
+     "e": 142
     },
     {
      "text": "do?",
-     "f": 133,
-     "e": 138
+     "f": 143,
+     "e": 149
     }
    ]
   },
   {
    "id": "S02ProjectNomad",
-   "from": 134,
-   "durationInFrames": 163,
+   "from": 148,
+   "durationInFrames": 180,
    "words": [
     {
      "text": "This",
      "f": 2,
-     "e": 10
+     "e": 13
     },
     {
      "text": "open-source",
-     "f": 11,
-     "e": 32
+     "f": 14,
+     "e": 43
     },
     {
      "text": "system",
-     "f": 33,
-     "e": 45
+     "f": 44,
+     "e": 60
     },
     {
      "text": "was",
-     "f": 46,
-     "e": 52
+     "f": 61,
+     "e": 69
     },
     {
      "text": "built",
-     "f": 53,
-     "e": 63
+     "f": 70,
+     "e": 83
     },
     {
      "text": "for",
-     "f": 64,
-     "e": 70
+     "f": 84,
+     "e": 92
     },
     {
      "text": "that",
-     "f": 71,
-     "e": 79
+     "f": 93,
+     "e": 104
     },
     {
      "text": "day.",
-     "f": 80,
-     "e": 88
+     "f": 104,
+     "e": 115
     },
     {
      "text": "It",
-     "f": 89,
-     "e": 93
+     "f": 116,
+     "e": 121
     },
     {
      "text": "is",
-     "f": 94,
-     "e": 98
+     "f": 122,
+     "e": 127
     },
     {
      "text": "called",
-     "f": 99,
-     "e": 111
+     "f": 128,
+     "e": 144
     },
     {
      "text": "Project",
-     "f": 112,
-     "e": 126
+     "f": 145,
+     "e": 164
     },
     {
      "text": "NOMAD.",
-     "f": 127,
+     "f": 165,
+     "e": 181
+    }
+   ]
+  },
+  {
+   "id": "S03TheCatch",
+   "from": 328,
+   "durationInFrames": 262,
+   "words": [
+    {
+     "text": "The",
+     "f": 2,
+     "e": 9
+    },
+    {
+     "text": "one",
+     "f": 10,
+     "e": 16
+    },
+    {
+     "text": "catch",
+     "f": 17,
+     "e": 28
+    },
+    {
+     "text": "is",
+     "f": 29,
+     "e": 34
+    },
+    {
+     "text": "you",
+     "f": 35,
+     "e": 41
+    },
+    {
+     "text": "download",
+     "f": 42,
+     "e": 60
+    },
+    {
+     "text": "everything",
+     "f": 61,
+     "e": 83
+    },
+    {
+     "text": "before",
+     "f": 84,
+     "e": 98
+    },
+    {
+     "text": "you",
+     "f": 99,
+     "e": 105
+    },
+    {
+     "text": "go",
+     "f": 106,
+     "e": 111
+    },
+    {
+     "text": "offline.",
+     "f": 112,
+     "e": 129
+    },
+    {
+     "text": "Full",
+     "f": 130,
      "e": 139
+    },
+    {
+     "text": "Wikipedia",
+     "f": 140,
+     "e": 160
+    },
+    {
+     "text": "alone",
+     "f": 161,
+     "e": 172
+    },
+    {
+     "text": "is",
+     "f": 173,
+     "e": 178
+    },
+    {
+     "text": "about",
+     "f": 179,
+     "e": 190
+    },
+    {
+     "text": "one",
+     "f": 191,
+     "e": 197
+    },
+    {
+     "text": "hundred",
+     "f": 198,
+     "e": 214
+    },
+    {
+     "text": "and",
+     "f": 215,
+     "e": 222
+    },
+    {
+     "text": "twenty-five",
+     "f": 222,
+     "e": 247
+    },
+    {
+     "text": "gigabytes.",
+     "f": 248,
+     "e": 270
+    }
+   ]
+  },
+  {
+   "id": "S04AllInOne",
+   "from": 590,
+   "durationInFrames": 286,
+   "words": [
+    {
+     "text": "All",
+     "f": 2,
+     "e": 10
+    },
+    {
+     "text": "in",
+     "f": 11,
+     "e": 16
+    },
+    {
+     "text": "one",
+     "f": 17,
+     "e": 25
+    },
+    {
+     "text": "machine.",
+     "f": 26,
+     "e": 47
+    },
+    {
+     "text": "You",
+     "f": 48,
+     "e": 56
+    },
+    {
+     "text": "get",
+     "f": 56,
+     "e": 64
+    },
+    {
+     "text": "medical",
+     "f": 65,
+     "e": 83
+    },
+    {
+     "text": "references,",
+     "f": 84,
+     "e": 113
+    },
+    {
+     "text": "offline",
+     "f": 114,
+     "e": 132
+    },
+    {
+     "text": "survival",
+     "f": 133,
+     "e": 154
+    },
+    {
+     "text": "guides,",
+     "f": 155,
+     "e": 173
+    },
+    {
+     "text": "regional",
+     "f": 174,
+     "e": 195
+    },
+    {
+     "text": "maps,",
+     "f": 196,
+     "e": 209
+    },
+    {
+     "text": "and",
+     "f": 210,
+     "e": 218
+    },
+    {
+     "text": "complete",
+     "f": 219,
+     "e": 239
+    },
+    {
+     "text": "Khan",
+     "f": 240,
+     "e": 251
+    },
+    {
+     "text": "Academy",
+     "f": 252,
+     "e": 270
+    },
+    {
+     "text": "courses.",
+     "f": 271,
+     "e": 292
+    }
+   ]
+  },
+  {
+   "id": "S05ToolsStore",
+   "from": 876,
+   "durationInFrames": 230,
+   "words": [
+    {
+     "text": "Plus",
+     "f": 2,
+     "e": 12
+    },
+    {
+     "text": "local",
+     "f": 13,
+     "e": 24
+    },
+    {
+     "text": "note-taking,",
+     "f": 25,
+     "e": 53
+    },
+    {
+     "text": "data",
+     "f": 54,
+     "e": 63
+    },
+    {
+     "text": "tools",
+     "f": 64,
+     "e": 76
+    },
+    {
+     "text": "with",
+     "f": 77,
+     "e": 86
+    },
+    {
+     "text": "CyberChef,",
+     "f": 87,
+     "e": 110
+    },
+    {
+     "text": "and",
+     "f": 111,
+     "e": 118
+    },
+    {
+     "text": "a",
+     "f": 119,
+     "e": 122
+    },
+    {
+     "text": "supply",
+     "f": 123,
+     "e": 137
+    },
+    {
+     "text": "depot",
+     "f": 138,
+     "e": 150
+    },
+    {
+     "text": "app",
+     "f": 150,
+     "e": 157
+    },
+    {
+     "text": "catalog",
+     "f": 158,
+     "e": 175
+    },
+    {
+     "text": "running",
+     "f": 175,
+     "e": 192
+    },
+    {
+     "text": "right",
+     "f": 193,
+     "e": 204
+    },
+    {
+     "text": "on",
+     "f": 205,
+     "e": 210
+    },
+    {
+     "text": "your",
+     "f": 211,
+     "e": 220
+    },
+    {
+     "text": "device.",
+     "f": 221,
+     "e": 237
+    }
+   ]
+  },
+  {
+   "id": "S06HardwareSpecs",
+   "from": 1106,
+   "durationInFrames": 310,
+   "words": [
+    {
+     "text": "The",
+     "f": 2,
+     "e": 11
+    },
+    {
+     "text": "basic",
+     "f": 12,
+     "e": 27
+    },
+    {
+     "text": "system",
+     "f": 28,
+     "e": 45
+    },
+    {
+     "text": "runs",
+     "f": 46,
+     "e": 58
+    },
+    {
+     "text": "on",
+     "f": 59,
+     "e": 64
+    },
+    {
+     "text": "almost",
+     "f": 65,
+     "e": 83
+    },
+    {
+     "text": "anything.",
+     "f": 84,
+     "e": 110
+    },
+    {
+     "text": "But",
+     "f": 111,
+     "e": 120
+    },
+    {
+     "text": "running",
+     "f": 121,
+     "e": 141
+    },
+    {
+     "text": "local",
+     "f": 142,
+     "e": 157
+    },
+    {
+     "text": "AI",
+     "f": 157,
+     "e": 163
+    },
+    {
+     "text": "wants",
+     "f": 164,
+     "e": 179
+    },
+    {
+     "text": "a",
+     "f": 180,
+     "e": 183
+    },
+    {
+     "text": "beefy",
+     "f": 184,
+     "e": 199
+    },
+    {
+     "text": "PC,",
+     "f": 200,
+     "e": 208
+    },
+    {
+     "text": "with",
+     "f": 209,
+     "e": 221
+    },
+    {
+     "text": "thirty-two",
+     "f": 222,
+     "e": 251
+    },
+    {
+     "text": "gigs",
+     "f": 252,
+     "e": 264
+    },
+    {
+     "text": "of",
+     "f": 265,
+     "e": 270
+    },
+    {
+     "text": "RAM",
+     "f": 271,
+     "e": 280
+    },
+    {
+     "text": "and",
+     "f": 281,
+     "e": 290
+    },
+    {
+     "text": "an",
+     "f": 291,
+     "e": 297
+    },
+    {
+     "text": "RTX",
+     "f": 297,
+     "e": 306
+    },
+    {
+     "text": "3060.",
+     "f": 307,
+     "e": 322
+    }
+   ]
+  },
+  {
+   "id": "S07CtaPinned",
+   "from": 1416,
+   "durationInFrames": 291,
+   "words": [
+    {
+     "text": "It",
+     "f": 2,
+     "e": 7
+    },
+    {
+     "text": "is",
+     "f": 8,
+     "e": 12
+    },
+    {
+     "text": "completely",
+     "f": 13,
+     "e": 36
+    },
+    {
+     "text": "free",
+     "f": 37,
+     "e": 46
+    },
+    {
+     "text": "and",
+     "f": 47,
+     "e": 54
+    },
+    {
+     "text": "open",
+     "f": 55,
+     "e": 64
+    },
+    {
+     "text": "source",
+     "f": 65,
+     "e": 78
+    },
+    {
+     "text": "with",
+     "f": 79,
+     "e": 88
+    },
+    {
+     "text": "over",
+     "f": 89,
+     "e": 98
+    },
+    {
+     "text": "forty-two",
+     "f": 99,
+     "e": 120
+    },
+    {
+     "text": "thousand",
+     "f": 120,
+     "e": 139
+    },
+    {
+     "text": "stars",
+     "f": 140,
+     "e": 151
+    },
+    {
+     "text": "on",
+     "f": 152,
+     "e": 156
+    },
+    {
+     "text": "GitHub.",
+     "f": 157,
+     "e": 173
+    },
+    {
+     "text": "Check",
+     "f": 174,
+     "e": 185
+    },
+    {
+     "text": "the",
+     "f": 186,
+     "e": 193
+    },
+    {
+     "text": "pinned",
+     "f": 194,
+     "e": 208
+    },
+    {
+     "text": "comment",
+     "f": 209,
+     "e": 225
+    },
+    {
+     "text": "for",
+     "f": 225,
+     "e": 232
+    },
+    {
+     "text": "all",
+     "f": 233,
+     "e": 240
+    },
+    {
+     "text": "the",
+     "f": 241,
+     "e": 248
+    },
+    {
+     "text": "links.",
+     "f": 249,
+     "e": 262
     }
    ]
   }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  body { background: #131926; width: 1080px; height: 1200px; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden; padding: 40px; }
+  .card { width: 900px; background: #FFFFFF; border-radius: 20px; border: 4px solid #1E293B; box-shadow: 0 20px 50px rgba(0,0,0,0.4); padding: 50px 60px; display: flex; flex-direction: column; gap: 24px; }
+  .card-top { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #E2E8F0; padding-bottom: 16px; }
+  .card-header { font-size: 20px; font-weight: 800; color: #64748B; text-transform: uppercase; letter-spacing: 0.12em; }
+  .wifi-icon { font-size: 26px; color: #16A34A; }
+  .item { display: flex; flex-direction: column; gap: 8px; }
+  .item-head { display: flex; justify-content: space-between; font-size: 24px; font-weight: 800; color: #0F172A; }
+  .item-tag { font-size: 22px; font-weight: 800; }
+  .bar-bg { width: 100%; height: 20px; background: #E2E8F0; border-radius: 10px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 10px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-top">
+      <div class="card-header">DOWNLOAD BEFORE YOU GO OFFLINE</div>
+      <div class="wifi-icon">📶 ONLINE</div>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <span>Full Wikipedia (Kiwix)</span>
+        <span class="item-tag" style="color:#2563EB;">125 GB</span>
+      </div>
+      <div class="bar-bg">
+        <div class="bar-fill" style="width:85%; background:#2563EB;"></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <span>Regional Offline Maps (ProtoMaps)</span>
+        <span class="item-tag" style="color:#16A34A;">MAPS</span>
+      </div>
+      <div class="bar-bg">
+        <div class="bar-fill" style="width:55%; background:#16A34A;"></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <span>Local AI Model & Embeddings (Ollama)</span>
+        <span class="item-tag" style="color:#9333EA;">LOCAL AI</span>
+      </div>
+      <div class="bar-bg">
+        <div class="bar-fill" style="width:30%; background:#9333EA;"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

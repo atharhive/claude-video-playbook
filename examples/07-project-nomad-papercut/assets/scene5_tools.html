@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  body { background: #0B1120; width: 1080px; height: 1200px; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden; padding: 40px; }
+  .grid { width: 900px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .tool-card { background: #1E293B; border: 3px solid #334155; border-radius: 18px; padding: 36px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; box-shadow: 0 16px 36px rgba(0,0,0,0.4); }
+  .tool-icon { font-size: 54px; }
+  .tool-name { font-size: 26px; font-weight: 900; color: #FFFFFF; }
+  .tool-desc { font-size: 16px; font-weight: 600; color: #94A3B8; line-height: 1.4; }
+  .tool-tag { background: #334155; color: #F1F5F9; font-size: 13px; font-weight: 800; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="tool-card">
+      <div class="tool-icon">📝</div>
+      <div class="tool-name">FlatNotes</div>
+      <div class="tool-desc">Local Markdown Notes & Personal Knowledge Base</div>
+      <div class="tool-tag">SELF-HOSTED</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-icon">🛡️</div>
+      <div class="tool-name">CyberChef</div>
+      <div class="tool-desc">Encryption, Data Hashing, Decoders & Analysis Tools</div>
+      <div class="tool-tag">GCHQ DATA TOOL</div>
+    </div>
+    <div class="tool-card">
+      <div class="tool-icon">📦</div>
+      <div class="tool-name">Supply Depot</div>
+      <div class="tool-desc">One-Click App Store with Custom Docker Container Support</div>
+      <div class="tool-tag">APP CATALOG</div>
+    </div>
+  </div>
+</body>
+</html>

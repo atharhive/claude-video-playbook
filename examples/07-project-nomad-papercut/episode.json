@@ -6,8 +6,8 @@
   "fps": 30,
   "start": 0.2,
   "gap": 0.25,
-  "hold": 1.2,
-  "whipScene": "S02ProjectNomad",
+  "hold": 1.5,
+  "whipScene": "S03TheCatch",
   "hook": {
     "lines": [
       ["THE WORLD"],
@@ -20,13 +20,28 @@
   },
   "scenes": [
     ["S01BlackoutHook", "l1_blackout", 0],
-    ["S02ProjectNomad", "l2_nomad", 0]
+    ["S02ProjectNomad", "l2_nomad", 0],
+    ["S03TheCatch", "l3_catch", 0],
+    ["S04AllInOne", "l4_allinone", 0],
+    ["S05ToolsStore", "l5_tools", 0],
+    ["S06HardwareSpecs", "l6_hardware", 0],
+    ["S07CtaPinned", "l7_cta", 0]
   ],
   "banners": {
     "S01BlackoutHook": "THE WORLD GOES OFFLINE",
-    "S02ProjectNomad": "MADE FOR THAT DAY"
+    "S02ProjectNomad": "MADE FOR THAT DAY",
+    "S03TheCatch": "THE ONE CATCH",
+    "S04AllInOne": "ALL IN ONE MACHINE",
+    "S05ToolsStore": "NOTES, DATA, A TOOL STORE",
+    "S06HardwareSpecs": "THE AI NEEDS A STRONG PC",
+    "S07CtaPinned": "FREE AND OPEN SOURCE"
   },
   "cuts": {
-    "S02ProjectNomad": {"kind": "tapePull", "label": "OFFLINE SERVER"}
+    "S02ProjectNomad": {"kind": "tapePull", "label": "OFFLINE SERVER"},
+    "S03TheCatch": {"kind": "whip"},
+    "S04AllInOne": {"kind": "tearAway"},
+    "S05ToolsStore": {"kind": "stampCut"},
+    "S06HardwareSpecs": {"kind": "tapePull", "label": "HARDWARE"},
+    "S07CtaPinned": {"kind": "stampCut"}
   }
 }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  body { background: #181216; width: 1080px; height: 1200px; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden; padding: 40px; }
+  .grid { width: 900px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .box { background: #241A22; border-radius: 20px; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; height: 500px; box-shadow: 0 16px 40px rgba(0,0,0,0.5); }
+  .box.basic { border: 3px solid #3B82F6; }
+  .box.ai { border: 3px solid #A855F7; box-shadow: 0 20px 50px rgba(168,85,247,0.25); }
+  .box-tag { font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; padding: 6px 16px; border-radius: 20px; width: fit-content; margin-bottom: 14px; }
+  .box-title { font-size: 38px; font-weight: 900; color: #FFFFFF; margin-bottom: 20px; }
+  .spec-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .spec-item { font-size: 20px; font-weight: 700; color: #E2E8F0; display: flex; align-items: center; gap: 10px; }
+  .spec-sub { font-size: 14px; color: #94A3B8; font-weight: 500; margin-left: 30px; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="box basic">
+      <div>
+        <div class="box-tag" style="background:rgba(59,130,246,0.2); color:#60A5FA;">BASIC OFFLINE SERVER</div>
+        <div class="box-title">Bare Minimum</div>
+        <ul class="spec-list">
+          <li class="spec-item">💻 Dual-Core CPU (2.0 GHz)</li>
+          <li class="spec-item">💾 4 GB RAM <span style="color:#60A5FA;">(&lt;1 GB Idle)</span></li>
+          <li class="spec-item">💽 5 GB to 250 GB Disk</li>
+          <li class="spec-item">🐧 Any Debian / Ubuntu / WSL2</li>
+        </ul>
+      </div>
+      <div style="font-size:14px; font-weight:800; color:#93C5FD; text-align:center; padding:10px; background:rgba(59,130,246,0.1); border-radius:10px;">
+        RUNS ON OLD LAPTOPS & MINIS
+      </div>
+    </div>
+
+    <div class="box ai">
+      <div>
+        <div class="box-tag" style="background:rgba(168,85,247,0.2); color:#C084FC;">AI ASSISTANT (OLLAMA)</div>
+        <div class="box-title">Optimal Specs</div>
+        <ul class="spec-list">
+          <li class="spec-item">⚡ Ryzen 7 or Intel i7</li>
+          <li class="spec-item">🧠 32 GB RAM System Memory</li>
+          <li class="spec-item">🎮 NVIDIA RTX 3060 (12GB VRAM)</li>
+          <li class="spec-item">🚀 NVMe SSD Storage</li>
+        </ul>
+      </div>
+      <div style="font-size:14px; font-weight:800; color:#D8B4FE; text-align:center; padding:10px; background:rgba(168,85,247,0.15); border-radius:10px;">
+        POWERFUL LOCAL RAG REASONING
+      </div>
+    </div>
+  </div>
+</body>
+</html>

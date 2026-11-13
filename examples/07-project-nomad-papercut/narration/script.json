@@ -2,11 +2,36 @@
   {
     "id": "l1_blackout",
     "speaker": "narrator",
-    "text": "If the entire world's internet went down tomorrow, what could your computer still do?"
+    "text": "If the world's internet went down tomorrow, what could your computer still do?"
   },
   {
     "id": "l2_nomad",
     "speaker": "narrator",
-    "text": "This open source system was built for that day. It is called Project NOMAD, and it turns any PC into a self-contained offline server."
+    "text": "This open-source system was built for that day. It is called Project NOMAD."
+  },
+  {
+    "id": "l3_catch",
+    "speaker": "narrator",
+    "text": "The one catch is you download everything before you go offline. Full Wikipedia alone is about one hundred and twenty-five gigabytes."
+  },
+  {
+    "id": "l4_allinone",
+    "speaker": "narrator",
+    "text": "All in one machine. You get medical references, offline survival guides, regional maps, and complete Khan Academy courses."
+  },
+  {
+    "id": "l5_tools",
+    "speaker": "narrator",
+    "text": "Plus local note-taking, data tools with CyberChef, and a supply depot app catalog running right on your device."
+  },
+  {
+    "id": "l6_hardware",
+    "speaker": "narrator",
+    "text": "The basic system runs on almost anything. But running local AI wants a beefy PC, with thirty-two gigs of RAM and an RTX 3060."
+  },
+  {
+    "id": "l7_cta",
+    "speaker": "narrator",
+    "text": "It is completely free and open source with over forty-two thousand stars on GitHub. Check the pinned comment for all the links."
   }
 ]
