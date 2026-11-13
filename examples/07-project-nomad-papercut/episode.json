@@ -1,0 +1,32 @@
+{
+  "comp": "ProjectNomadPapercut",
+  "out": "project-nomad-papercut",
+  "narration": "./narration",
+  "timing": "timing_narrator.js",
+  "fps": 30,
+  "start": 0.2,
+  "gap": 0.25,
+  "hold": 1.2,
+  "whipScene": "S02ProjectNomad",
+  "hook": {
+    "lines": [
+      ["THE WORLD"],
+      ["GOES OFFLINE"]
+    ],
+    "hot": ["OFFLINE"],
+    "top": 140,
+    "size": 86,
+    "hold": 3.8
+  },
+  "scenes": [
+    ["S01BlackoutHook", "l1_blackout", 0],
+    ["S02ProjectNomad", "l2_nomad", 0]
+  ],
+  "banners": {
+    "S01BlackoutHook": "THE WORLD GOES OFFLINE",
+    "S02ProjectNomad": "MADE FOR THAT DAY"
+  },
+  "cuts": {
+    "S02ProjectNomad": {"kind": "tapePull", "label": "OFFLINE SERVER"}
+  }
+}

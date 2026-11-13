@@ -1,0 +1,12 @@
+[
+  {
+    "id": "l1_blackout",
+    "speaker": "narrator",
+    "text": "If the entire world's internet went down tomorrow, what could your computer still do?"
+  },
+  {
+    "id": "l2_nomad",
+    "speaker": "narrator",
+    "text": "This open source system was built for that day. It is called Project NOMAD, and it turns any PC into a self-contained offline server."
+  }
+]

@@ -1,0 +1,166 @@
+{
+ "fps": 30,
+ "durationInFrames": 297,
+ "scenes": [
+  {
+   "id": "S01BlackoutHook",
+   "from": 0,
+   "durationInFrames": 134,
+   "words": [
+    {
+     "text": "If",
+     "f": 8,
+     "e": 11
+    },
+    {
+     "text": "the",
+     "f": 12,
+     "e": 18
+    },
+    {
+     "text": "world's",
+     "f": 19,
+     "e": 31
+    },
+    {
+     "text": "internet",
+     "f": 32,
+     "e": 46
+    },
+    {
+     "text": "went",
+     "f": 48,
+     "e": 55
+    },
+    {
+     "text": "down",
+     "f": 56,
+     "e": 63
+    },
+    {
+     "text": "tomorrow,",
+     "f": 64,
+     "e": 80
+    },
+    {
+     "text": "what",
+     "f": 81,
+     "e": 88
+    },
+    {
+     "text": "could",
+     "f": 90,
+     "e": 98
+    },
+    {
+     "text": "your",
+     "f": 100,
+     "e": 107
+    },
+    {
+     "text": "computer",
+     "f": 108,
+     "e": 122
+    },
+    {
+     "text": "still",
+     "f": 123,
+     "e": 132
+    },
+    {
+     "text": "do?",
+     "f": 133,
+     "e": 138
+    }
+   ]
+  },
+  {
+   "id": "S02ProjectNomad",
+   "from": 134,
+   "durationInFrames": 163,
+   "words": [
+    {
+     "text": "This",
+     "f": 2,
+     "e": 10
+    },
+    {
+     "text": "open-source",
+     "f": 11,
+     "e": 32
+    },
+    {
+     "text": "system",
+     "f": 33,
+     "e": 45
+    },
+    {
+     "text": "was",
+     "f": 46,
+     "e": 52
+    },
+    {
+     "text": "built",
+     "f": 53,
+     "e": 63
+    },
+    {
+     "text": "for",
+     "f": 64,
+     "e": 70
+    },
+    {
+     "text": "that",
+     "f": 71,
+     "e": 79
+    },
+    {
+     "text": "day.",
+     "f": 80,
+     "e": 88
+    },
+    {
+     "text": "It",
+     "f": 89,
+     "e": 93
+    },
+    {
+     "text": "is",
+     "f": 94,
+     "e": 98
+    },
+    {
+     "text": "called",
+     "f": 99,
+     "e": 111
+    },
+    {
+     "text": "Project",
+     "f": 112,
+     "e": 126
+    },
+    {
+     "text": "NOMAD.",
+     "f": 127,
+     "e": 139
+    }
+   ]
+  }
+ ],
+ "hook": {
+  "lines": [
+   [
+    "THE WORLD"
+   ],
+   [
+    "GOES OFFLINE"
+   ]
+  ],
+  "hot": [
+   "OFFLINE"
+  ],
+  "top": 140,
+  "size": 86,
+  "outAt": 114
+ }
+}
